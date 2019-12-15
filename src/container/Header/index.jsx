@@ -1,32 +1,11 @@
 import React, { Fragment } from "react";
-
+import {Link} from 'react-router-dom'
 const Header = props => {
   return (
     <Fragment>
       <header className="header1">
         {/* Header desktop */}
         <div className="container-menu-header">
-          <div className="topbar">
-            <div className="topbar-social">
-              <a href="#" className="topbar-social-item fa fa-facebook" />
-              <a href="#" className="topbar-social-item fa fa-instagram" />
-              <a href="#" className="topbar-social-item fa fa-pinterest-p" />
-              <a href="#" className="topbar-social-item fa fa-snapchat-ghost" />
-              <a href="#" className="topbar-social-item fa fa-youtube-play" />
-            </div>
-            <span className="topbar-child1">
-              Free shipping for standard order over $100
-            </span>
-            <div className="topbar-child2">
-              <span className="topbar-email">fashe@example.com</span>
-              <div className="topbar-language rs1-select2">
-                <select className="selection-1" name="time">
-                  <option>USD</option>
-                  <option>EUR</option>
-                </select>
-              </div>
-            </div>
-          </div>
           <div className="wrap_header">
             {/* Logo */}
             <a href="index.html" className="logo">
@@ -37,10 +16,10 @@ const Header = props => {
               <nav className="menu">
                 <ul className="main_menu">
                   <li>
-                    <a href="index.html">Home</a>
+                    <Link to="/">Home</Link>
                     <ul className="sub_menu">
                       <li>
-                        <a href="index.html">Homepage V1</a>
+                        <Link to='/' href="index.html">Homepage V1</Link>
                       </li>
                       <li>
                         <a href="home-02.html">Homepage V2</a>
@@ -51,7 +30,7 @@ const Header = props => {
                     </ul>
                   </li>
                   <li>
-                    <a href="product.html">Shop</a>
+                    <Link to='/san-pham'>Shop</Link>
                   </li>
                   <li className="sale-noti">
                     <a href="product.html">Sale</a>
@@ -334,7 +313,6 @@ const Header = props => {
           </nav>
         </div>
       </header>
-      ;
     </Fragment>
   );
 };

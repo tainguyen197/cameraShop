@@ -86,7 +86,7 @@ const SectionBrand = props => {
       </div>
     </div>
   </div>
-</section>;
+</section>
 
     </Fragment>
   );
