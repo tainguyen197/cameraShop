@@ -36,7 +36,7 @@ const Header = props => {
                     <a href="product.html">Sale</a>
                   </li>
                   <li>
-                    <a href="cart.html">Features</a>
+                  <Link to='/chi-tiet'>Chi tiet</Link>
                   </li>
                   <li>
                     <a href="blog.html">Blog</a>

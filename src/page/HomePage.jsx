@@ -4,7 +4,6 @@ import Hero from "../container/Hero/index";
 import SectionBrands from "../container/SectionBrands/index";
 import SectionListProducts from "../container/SectionListProducts";
 import ProductCard from "../component/ProductCard/index";
-import Footer from "../container/Footer";
 
 const Homepage = props => {
   const FeaturedItems = [
@@ -24,9 +23,16 @@ const Homepage = props => {
     <ProductCard />,
     <ProductCard />
   ];
+
+  const listHero = [0, 1, 2, 3, 4, 5].map(item => (
+    <div className="hero-banner">
+      <img src="images/banner-03.jpg" alt="IMG-BENNER" />
+      <p className="legend">Legend</p>
+    </div>
+  ));
   return (
     <Fragment>
-      <Hero></Hero>
+      <Hero items={listHero}></Hero>
       <SectionBrands></SectionBrands>
       <SectionListProducts
         items={FeaturedItems}
@@ -36,8 +42,6 @@ const Homepage = props => {
         items={SellItems}
         title="Đang giảm giá"
       ></SectionListProducts>
-
-      <Footer></Footer>
     </Fragment>
   );
 };
