@@ -9,7 +9,8 @@ const SectionListProducts = props => {
 
   const responsive = {
     0: { items: 1 },
-    600: { items: 2 },
+    320: {items:1},
+    500: { items: 4 },
     960: { items: 5 }
   };
 
@@ -27,9 +28,9 @@ const SectionListProducts = props => {
         <div className='alice-carousel-box'>
         <AliceCarousel
           buttonsDisabled={true}
-          infinite={true}
+          // infinite={true}
           keysControlDisabled={true}
-          autoPlay={true}
+          // autoPlay={true}
           autoPlayInterval={2000}
           fadeOutAnimation={true}
           items={props.items}
