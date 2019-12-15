@@ -2,9 +2,32 @@ import React, { Fragment } from "react";
 import PromoteBanner from "../component/Promote/index";
 import FilterList from "../component/FilterList/index";
 import ProductCardWithInfo from "../component/ProductCardWithInfo/index";
-
+import Pagination from "../component/Nagination/index"
 const ProductPage = props => {
-  const listCardWithInfo = [<ProductCardWithInfo/>,<ProductCardWithInfo/>,<ProductCardWithInfo/>,<ProductCardWithInfo/>,<ProductCardWithInfo/>,<ProductCardWithInfo/>]
+  const listCardWithInfo = [
+    <ProductCardWithInfo />,
+    <ProductCardWithInfo />,
+    <ProductCardWithInfo />,
+    <ProductCardWithInfo />,
+    <ProductCardWithInfo />,
+    <ProductCardWithInfo />
+  ];
+
+  const listBrandOptions = [
+    "Canon",
+    "Nikon",
+    "Sony",
+    "Fujifilm",
+    "Olympus",
+    "Pentax "
+  ];
+  const listMoneyRangeOptions = [
+    "Từ 0 - 5 triệu",
+    "Từ 5 - 10 triệu",
+    "Từ 10 - 20 triệu",
+    "Trên 20 triệu"
+  ];
+
   return (
     <Fragment>
       <PromoteBanner></PromoteBanner>
@@ -14,57 +37,26 @@ const ProductPage = props => {
             {/* left section */}
             <div className="col-sm-6 col-md-4 col-lg-3 p-b-50">
               <div className="leftbar p-r-20 p-r-0-sm">
-                <FilterList></FilterList>
+                <FilterList values={listBrandOptions} label="Thương hiệu" />
+                <FilterList values={listMoneyRangeOptions} label="Giá tiền" />
               </div>
             </div>
             {/* end left section */}
             {/* rigth section */}
             <div className="col-sm-6 col-md-8 col-lg-9 p-b-50">
-              {/*  */}
-              {/* <div class="flex-sb-m flex-w p-b-35">
-						<div class="flex-w">
-							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-								<select class="selection-2" name="sorting">
-									<option>Default Sorting</option>
-									<option>Popularity</option>
-									<option>Price: low to high</option>
-									<option>Price: high to low</option>
-								</select>
-							</div>
+              <div className="flex-sb-m flex-w p-b-35">
 
-							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-								<select class="selection-2" name="sorting">
-									<option>Price</option>
-									<option>$0.00 - $50.00</option>
-									<option>$50.00 - $100.00</option>
-									<option>$100.00 - $150.00</option>
-									<option>$150.00 - $200.00</option>
-									<option>$200.00+</option>
-
-								</select>
-							</div>
-						</div>
-
-						<span class="s-text8 p-t-5 p-b-5">
-							Showing 1–12 of 16 results
-						</span>
-					</div> */}
-              {/* Product */}
-              <div className="row">
-                {listCardWithInfo}
-                 </div>
-              {/* Pagination */}
-              <div className="pagination flex-m flex-w p-t-26">
-                <a
-                  href="#"
-                  className="item-pagination flex-c-m trans-0-4 active-pagination"
-                >
-                  1
-                </a>
-                <a href="#" className="item-pagination flex-c-m trans-0-4">
-                  2
-                </a>
+                <span className="s-text8 p-t-5 p-b-5">
+                  Showing 1–12 of 16 results
+                </span>
+                <span className="s-text8 p-t-5 p-b-5">
+                  <strong>Xóa tất cả tiềm kiếm</strong>
+                </span>
               </div>
+
+              {/* Product */}
+              <div className="row">{listCardWithInfo}</div>
+              <Pagination/>
             </div>
           </div>
         </div>
