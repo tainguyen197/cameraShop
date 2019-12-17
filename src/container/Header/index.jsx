@@ -1,6 +1,9 @@
-import React, { Fragment } from "react";
-import {Link} from 'react-router-dom'
+import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
+import "./header.css";
 const Header = props => {
+  const [mobileMenuShow, setmobileMenuShow] = useState(false);
+
   return (
     <Fragment>
       <header className="header1">
@@ -16,124 +19,21 @@ const Header = props => {
               <nav className="menu">
                 <ul className="main_menu">
                   <li>
-                    <Link to="/">Home</Link>
-                    <ul className="sub_menu">
-                      <li>
-                        <Link to='/' href="index.html">Homepage V1</Link>
-                      </li>
-                      <li>
-                        <a href="home-02.html">Homepage V2</a>
-                      </li>
-                      <li>
-                        <a href="home-03.html">Homepage V3</a>
-                      </li>
-                    </ul>
+                    <Link to="/">Trang chủ</Link>
                   </li>
                   <li>
-                    <Link to='/san-pham'>Shop</Link>
+                    <Link to="/san-pham">Sản phẩm</Link>
                   </li>
                   <li className="sale-noti">
-                    <a href="product.html">Sale</a>
+                    <a href="product.html">Về chúng tôi</a>
                   </li>
                   <li>
-                  <Link to='/chi-tiet'>Chi tiet</Link>
-                  </li>
-                  <li>
-                    <a href="blog.html">Blog</a>
-                  </li>
-                  <li>
-                    <a href="about.html">About</a>
-                  </li>
-                  <li>
-                    <a href="contact.html">Contact</a>
+                    <Link to="/chi-tiet">Liên hệ</Link>
                   </li>
                 </ul>
               </nav>
             </div>
             {/* Header Icon */}
-            <div className="header-icons">
-              <a href="#" className="header-wrapicon1 dis-block">
-                <img
-                  src="images/icons/icon-header-01.png"
-                  className="header-icon1"
-                  alt="ICON"
-                />
-              </a>
-              <span className="linedivide1" />
-              <div className="header-wrapicon2">
-                <img
-                  src="images/icons/icon-header-02.png"
-                  className="header-icon1 js-show-header-dropdown"
-                  alt="ICON"
-                />
-                <span className="header-icons-noti">0</span>
-                {/* Header cart noti */}
-                <div className="header-cart header-dropdown">
-                  <ul className="header-cart-wrapitem">
-                    <li className="header-cart-item">
-                      <div className="header-cart-item-img">
-                        <img src="images/item-cart-01.jpg" alt="IMG" />
-                      </div>
-                      <div className="header-cart-item-txt">
-                        <a href="#" className="header-cart-item-name">
-                          White Shirt With Pleat Detail Back
-                        </a>
-                        <span className="header-cart-item-info">
-                          1 x $19.00
-                        </span>
-                      </div>
-                    </li>
-                    <li className="header-cart-item">
-                      <div className="header-cart-item-img">
-                        <img src="images/item-cart-02.jpg" alt="IMG" />
-                      </div>
-                      <div className="header-cart-item-txt">
-                        <a href="#" className="header-cart-item-name">
-                          Converse All Star Hi Black Canvas
-                        </a>
-                        <span className="header-cart-item-info">
-                          1 x $39.00
-                        </span>
-                      </div>
-                    </li>
-                    <li className="header-cart-item">
-                      <div className="header-cart-item-img">
-                        <img src="images/item-cart-03.jpg" alt="IMG" />
-                      </div>
-                      <div className="header-cart-item-txt">
-                        <a href="#" className="header-cart-item-name">
-                          Nixon Porter Leather Watch In Tan
-                        </a>
-                        <span className="header-cart-item-info">
-                          1 x $17.00
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
-                  <div className="header-cart-total">Total: $75.00</div>
-                  <div className="header-cart-buttons">
-                    <div className="header-cart-wrapbtn">
-                      {/* Button */}
-                      <a
-                        href="cart.html"
-                        className="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"
-                      >
-                        View Cart
-                      </a>
-                    </div>
-                    <div className="header-cart-wrapbtn">
-                      {/* Button */}
-                      <a
-                        href="#"
-                        className="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"
-                      >
-                        Check Out
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         {/* Header Mobile */}
@@ -145,90 +45,14 @@ const Header = props => {
           {/* Button show menu */}
           <div className="btn-show-menu">
             {/* Header Icon mobile */}
-            <div className="header-icons-mobile">
-              <a href="#" className="header-wrapicon1 dis-block">
-                <img
-                  src="images/icons/icon-header-01.png"
-                  className="header-icon1"
-                  alt="ICON"
-                />
-              </a>
-              <span className="linedivide2" />
-              <div className="header-wrapicon2">
-                <img
-                  src="images/icons/icon-header-02.png"
-                  className="header-icon1 js-show-header-dropdown"
-                  alt="ICON"
-                />
-                <span className="header-icons-noti">0</span>
-                {/* Header cart noti */}
-                <div className="header-cart header-dropdown">
-                  <ul className="header-cart-wrapitem">
-                    <li className="header-cart-item">
-                      <div className="header-cart-item-img">
-                        <img src="images/item-cart-01.jpg" alt="IMG" />
-                      </div>
-                      <div className="header-cart-item-txt">
-                        <a href="#" className="header-cart-item-name">
-                          White Shirt With Pleat Detail Back
-                        </a>
-                        <span className="header-cart-item-info">
-                          1 x $19.00
-                        </span>
-                      </div>
-                    </li>
-                    <li className="header-cart-item">
-                      <div className="header-cart-item-img">
-                        <img src="images/item-cart-02.jpg" alt="IMG" />
-                      </div>
-                      <div className="header-cart-item-txt">
-                        <a href="#" className="header-cart-item-name">
-                          Converse All Star Hi Black Canvas
-                        </a>
-                        <span className="header-cart-item-info">
-                          1 x $39.00
-                        </span>
-                      </div>
-                    </li>
-                    <li className="header-cart-item">
-                      <div className="header-cart-item-img">
-                        <img src="images/item-cart-03.jpg" alt="IMG" />
-                      </div>
-                      <div className="header-cart-item-txt">
-                        <a href="#" className="header-cart-item-name">
-                          Nixon Porter Leather Watch In Tan
-                        </a>
-                        <span className="header-cart-item-info">
-                          1 x $17.00
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
-                  <div className="header-cart-total">Total: $75.00</div>
-                  <div className="header-cart-buttons">
-                    <div className="header-cart-wrapbtn">
-                      {/* Button */}
-                      <a
-                        href="cart.html"
-                        className="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"
-                      >
-                        View Cart
-                      </a>
-                    </div>
-                    <div className="header-cart-wrapbtn">
-                      {/* Button */}
-                      <a
-                        href="#"
-                        className="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"
-                      >
-                        Check Out
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="btn-show-menu-mobile hamburger hamburger--squeeze">
+            <div
+              onClick={e => setmobileMenuShow(oldValue => !oldValue)}
+              className={
+                !mobileMenuShow
+                  ? "btn-show-menu-mobile hamburger hamburger--squeeze"
+                  : "btn-show-menu-mobile hamburger hamburger--squeeze is-active"
+              }
+            >
               <span className="hamburger-box">
                 <span className="hamburger-inner" />
               </span>
@@ -236,43 +60,16 @@ const Header = props => {
           </div>
         </div>
         {/* Menu Mobile */}
-        <div className="wrap-side-menu">
+        <div
+          className={
+            mobileMenuShow
+              ? "wrap-side-menu animation-menu active-menu"
+              : "wrap-side-menu"
+          }
+          style={{ display: mobileMenuShow ? "block" : "none" }}
+        >
           <nav className="side-menu">
             <ul className="main-menu">
-              <li className="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-                <span className="topbar-child1">
-                  Free shipping for standard order over $100
-                </span>
-              </li>
-              <li className="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-                <div className="topbar-child2-mobile">
-                  <span className="topbar-email">fashe@example.com</span>
-                  <div className="topbar-language rs1-select2">
-                    <select className="selection-1" name="time">
-                      <option>USD</option>
-                      <option>EUR</option>
-                    </select>
-                  </div>
-                </div>
-              </li>
-              <li className="item-topbar-mobile p-l-10">
-                <div className="topbar-social-mobile">
-                  <a href="#" className="topbar-social-item fa fa-facebook" />
-                  <a href="#" className="topbar-social-item fa fa-instagram" />
-                  <a
-                    href="#"
-                    className="topbar-social-item fa fa-pinterest-p"
-                  />
-                  <a
-                    href="#"
-                    className="topbar-social-item fa fa-snapchat-ghost"
-                  />
-                  <a
-                    href="#"
-                    className="topbar-social-item fa fa-youtube-play"
-                  />
-                </div>
-              </li>
               <li className="item-menu-mobile">
                 <a href="index.html">Home</a>
                 <ul className="sub-menu">
@@ -317,4 +114,4 @@ const Header = props => {
   );
 };
 
-export default Header
+export default Header;
