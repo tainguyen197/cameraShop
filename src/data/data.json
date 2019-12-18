@@ -1,7 +1,29 @@
 {
   "brand": [
-    "Sony",
-    "Canon"
+    {
+      "id": "sony",
+      "name":"Sony",
+      "src":[]
+    },
+    {
+      "id": "pentax",
+      "name":"Pentax",
+      "src":[]
+    },{
+      "id": "nikon",
+      "name":"Nikon",
+      "src":[]
+    },
+    {
+      "id": "canon",
+      "name":"Canon",
+      "src":[]
+    },
+    {
+      "id": "fujifilm",
+      "name":"Fujifilm",
+      "src":[]
+    }
   ],
   "products": [
     {

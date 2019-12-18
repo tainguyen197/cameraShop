@@ -1,10 +1,16 @@
-.hero-banner{
-  height:   calc(100vh - 80px);
+.carousel .slide img{
+    height:  calc(100vh - 80px);
+    width: 100%;
+    object-fit:  cover;
+    object-position: center;
 }
 
-.hero-banner img{
+@media only screen and (max-width: 425px) {
+  .carousel .slide img{
     height: 100%;
     width: 100%;
     object-fit:  cover;
     object-position: center;
+  }
+
 }
