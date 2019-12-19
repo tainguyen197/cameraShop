@@ -8,19 +8,19 @@ import { useDispatch, useSelector } from "react-redux";
 import * as brandAction from "../action/brand";
 import * as productAction from "../action/product";
 const Homepage = props => {
-  // const dispatch = useDispatch();
-  // const productStore = useSelector(store => {
-  //   return store.product;
-  // });
+  const dispatch = useDispatch();
+  const productStore = useSelector(store => {
+    return store.product;
+  });
 
   // const brandStore = useSelector(store => {
   //   return store.brand;
   // });
 
 
-  // useEffect(()=>{
-  //   dispatch(brandAction.loadBrand());
-  // },[])
+  useEffect(()=>{
+    dispatch(productAction.loadProduct());
+  },[])
 
   // const productData = useMemo(() => {
   //   if (productStore.loading) return;
@@ -62,6 +62,8 @@ const Homepage = props => {
     <ProductCard />,
     <ProductCard />
   ];
+
+  
 
   // const listHero = brandStore.data?brandStore.data.map(item => (
   //   <div className="hero-banner">

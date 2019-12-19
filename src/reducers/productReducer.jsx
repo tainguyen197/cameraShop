@@ -13,8 +13,8 @@ const productReducer = (state = initState, action) => {
       console.log("LOAD_PRODUCT_LIST_FAIL");
       return { ...state, loading: false, error: true };
     case "LOAD_PRODUCT_LIST_SUCCESS":
-      console.log("LOAD_PRODUCT_LIST_SUCCESS");
-      return { ...state, loading: false };
+      console.log(action.payload);
+      return { ...state, loading: false,data: action.payload };
     default:
       return state;
   }
