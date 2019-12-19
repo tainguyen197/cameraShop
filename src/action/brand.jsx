@@ -10,30 +10,36 @@ const LOAD_BRAND_LIST_SUCCESS = "LOAD_BRAND_LIST_SUCCESS";
 
 //action creator
 export const  loadBrand = () => {
-  return dispatch => {
+  return async dispatch => {
     dispatch(loadBrandRequest());
-    const brands = data?data.brand:[];
-     brands.forEach((item,index) => {
-      storage
-      .ref("images/brands")
-      .child(item.id+".jpg")
-      .getDownloadURL()
-      .then(url => {
-        console.log(url);
-        
-          brands[index].src = [...item.src, url]
-      })
-      .finally(()=>{console.log('aaaa');
-       dispatch(loadBrandSuccess(brands))})
-      .catch(err => {
-        console.log(err);
-      });
-    });
+    const brands = data?data.brands:[];
+    
+     const brandsList = await Promise.all(
+      brands.map((item, index)=>{
+          return storage
+          .ref("images/brands")
+          .child(item.id+".jpg")
+          .getDownloadURL()
+          .then(url => {
+            const newItem = {...item};
+            newItem.src.push(url)
+            return newItem;
+          })
+      })).catch(err=>dispatch(loadBrandFail(err)))
+    
+    dispatch(loadBrandSuccess(brandsList)) 
+      
     
   };
 };
 const loadBrandRequest = () => ({ type: LOAD_BRAND_LIST_REQUEST });
+
 const loadBrandSuccess = payload => ({
   type: LOAD_BRAND_LIST_SUCCESS,
+  payload
+});
+
+const loadBrandFail = payload => ({
+  type: LOAD_PRODUCT_LIST_FAIL,
   payload
 });

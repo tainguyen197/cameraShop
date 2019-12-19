@@ -12,41 +12,27 @@ const LOAD_HERO_LIST_SUCCESS = "LOAD_HERO_LIST_SUCCESS";
 export const loadHero = () => {
   return dispatch => {
     dispatch(loadHeroRequest());
-    const bannerList = [];
     storage
       .ref("images/hero")
       .listAll()
-      .then(rs => {
-        rs.items.forEach(banner => {
-          storage
-            .ref(banner.location.path_)
-            .getDownloadURL()
-            .then(url => {
-            //   console.log(url);
-              bannerList.push(url);
-              dispatch(loadHeroSuccess(bannerList));
-            });
-        });
+      .then(async rs => {
+        const heroList = await Promise.all(
+          rs.items.map(banner => {
+            return storage.ref(banner.location.path).getDownloadURL();
+          })
+        );
+        return heroList;
       })
-      .then(() => {
-        console.log("33333");
-        
-      })
-      .catch(err => {
-        console.log(err);
-      });
-    //   .getDownloadURL()
-    //   .then(url => {
-    //       brands[index].src = [...item.src, url]
-    //   })
-    //   .finally(()=>dispatch(loadHeroSuccess(brands)))
-    //   .catch(err => {
-    //     console.log(err);
-    //   });
+      .then(rs => dispatch(loadHeroSuccess(rs)))
+      .catch(err => dispatch(loadHeroFail(err)));
   };
 };
 const loadHeroRequest = () => ({ type: LOAD_HERO_LIST_REQUEST });
 const loadHeroSuccess = payload => ({
   type: LOAD_HERO_LIST_SUCCESS,
+  payload
+});
+const loadHeroFail = payload => ({
+  type: LOAD_HERO_LIST_FAIL,
   payload
 });

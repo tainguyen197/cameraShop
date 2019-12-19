@@ -1,5 +1,5 @@
 {
-  "brand": [
+  "brands": [
     {
       "id": "sony",
       "name":"Sony",
@@ -32,7 +32,8 @@
       "name": "Máy Ảnh Canon EOS R Body",
       "guarantee": "24 tháng",
       "origin": "Hàn Quốc",
-      "brand": "Sony",
+      "brand": "sony",
+      "type": "sale",
       "description": "Với việc Sony tiêu thụ thị trường máy ảnh với tốc độ đáng kinh ngạc, Nikon tung ra dòng máy ảnh không gương lật Z với một phản ứng hỗn hợp. Canon đã ngay lập tức đáp trả với sự bổ sung của họ vào thị trường không gương lật bằng chiếc máy ảnh Canon EOS R",
       "images": []
     },
@@ -42,57 +43,28 @@
       "name": "Máy Ảnh Canon EOS R Body",
       "guarantee": "24 tháng",
       "origin": "Hàn Quốc",
-      "brand": "Sony",
+      "brand": "sony",
+      "type": "sale",
       "description": "Với việc Sony tiêu thụ thị trường máy ảnh với tốc độ đáng kinh ngạc, Nikon tung ra dòng máy ảnh không gương lật Z với một phản ứng hỗn hợp. Canon đã ngay lập tức đáp trả với sự bổ sung của họ vào thị trường không gương lật bằng chiếc máy ảnh Canon EOS R",
       "images": []
-    },
-    {
-      "id": "A01010233",
+    },  {
+      "id": "A01010236",
       "price": "",
       "name": "Máy Ảnh Canon EOS R Body",
       "guarantee": "24 tháng",
       "origin": "Hàn Quốc",
-      "brand": "Sony",
+      "brand": "sony",
+      "type": "sale",
       "description": "Với việc Sony tiêu thụ thị trường máy ảnh với tốc độ đáng kinh ngạc, Nikon tung ra dòng máy ảnh không gương lật Z với một phản ứng hỗn hợp. Canon đã ngay lập tức đáp trả với sự bổ sung của họ vào thị trường không gương lật bằng chiếc máy ảnh Canon EOS R",
       "images": []
-    },
-    {
+    },  {
       "id": "A01010237",
       "price": "",
-      "brand": "Sony",
       "name": "Máy Ảnh Canon EOS R Body",
       "guarantee": "24 tháng",
       "origin": "Hàn Quốc",
-      "description": "Với việc Sony tiêu thụ thị trường máy ảnh với tốc độ đáng kinh ngạc, Nikon tung ra dòng máy ảnh không gương lật Z với một phản ứng hỗn hợp. Canon đã ngay lập tức đáp trả với sự bổ sung của họ vào thị trường không gương lật bằng chiếc máy ảnh Canon EOS R",
-      "images": []
-    },
-    {
-      "id": "A01010234",
-      "price": "",
-      "name": "Máy Ảnh Canon EOS R Body",
-      "guarantee": "24 tháng",
-      "brand": "Sony",
-      "origin": "Hàn Quốc",
-      "description": "Với việc Sony tiêu thụ thị trường máy ảnh với tốc độ đáng kinh ngạc, Nikon tung ra dòng máy ảnh không gương lật Z với một phản ứng hỗn hợp. Canon đã ngay lập tức đáp trả với sự bổ sung của họ vào thị trường không gương lật bằng chiếc máy ảnh Canon EOS R",
-      "images": []
-    },
-    {
-      "id": "A01010235",
-      "price": "",
-      "name": "Máy Ảnh Canon EOS R Body",
-      "guarantee": "24 tháng",
-      "origin": "Hàn Quốc",
-      "brand": "Sony",
-      "description": "Với việc Sony tiêu thụ thị trường máy ảnh với tốc độ đáng kinh ngạc, Nikon tung ra dòng máy ảnh không gương lật Z với một phản ứng hỗn hợp. Canon đã ngay lập tức đáp trả với sự bổ sung của họ vào thị trường không gương lật bằng chiếc máy ảnh Canon EOS R",
-      "images": []
-    },
-    {
-      "id": "A01010233",
-      "price": "",
-      "name": "Máy Ảnh Canon EOS R Body",
-      "guarantee": "24 tháng",
-      "origin": "Hàn Quốc",
-      "brand": "Sony",
+      "brand": "sony",
+      "type": "sale",
       "description": "Với việc Sony tiêu thụ thị trường máy ảnh với tốc độ đáng kinh ngạc, Nikon tung ra dòng máy ảnh không gương lật Z với một phản ứng hỗn hợp. Canon đã ngay lập tức đáp trả với sự bổ sung của họ vào thị trường không gương lật bằng chiếc máy ảnh Canon EOS R",
       "images": []
     },
@@ -101,8 +73,9 @@
       "price": "",
       "name": "Máy Ảnh Canon EOS R Body",
       "guarantee": "24 tháng",
-      "brand": "Sony",
       "origin": "Hàn Quốc",
+      "brand": "sony",
+      "type": "sale",
       "description": "Với việc Sony tiêu thụ thị trường máy ảnh với tốc độ đáng kinh ngạc, Nikon tung ra dòng máy ảnh không gương lật Z với một phản ứng hỗn hợp. Canon đã ngay lập tức đáp trả với sự bổ sung của họ vào thị trường không gương lật bằng chiếc máy ảnh Canon EOS R",
       "images": []
     }

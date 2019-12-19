@@ -15,7 +15,6 @@ const SectionBrand = props => {
   }, []);
 
   const data = brandStore.data;
-  console.log(brandStore);
 
   return (
     <Fragment>
