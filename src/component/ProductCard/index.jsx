@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
 import './ProductCard.css'
 const ProductCard = props => {
+  const {image} = props;
   return (
     <Fragment>
       <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
         <div className="product-card-img-box">
-        <img src="images/banner-05.jpg" alt="IMG-PRODUCT" />
+        <img src={image?image:"images/banner-05.jpg"} alt="IMG-PRODUCT" />
         </div>
         <div class="block2-overlay trans-0-4">
           <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">

@@ -28,10 +28,11 @@ export const loadProduct = () => {
                 return storage.ref(url.location.path).getDownloadURL();
               }))
             return {...product,images: listImg}
-          }).then(data=>dispatch(loadProductSuccess(data)))
+          })
           .catch(err => console.log(err));
       })
      )
+     dispatch(loadProductSuccess(productList))
   }
 }
 const loadProductRequest = () => ({ type: LOAD_PRODUCT_LIST_REQUEST });
