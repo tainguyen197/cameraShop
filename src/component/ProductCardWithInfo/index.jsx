@@ -1,12 +1,15 @@
 import React, { Fragment } from "react";
+import {OpitmizeNumber} from '../../config/optimizeMoney'
 import './ProductCardWithInfo.css'
 const ProductCardWithInfo = props => {
   const {url,name,title,price} = props;
+  console.log(OpitmizeNumber(price));
+  
   return (
     <Fragment>
-      <div className="col-sm-12 col-md-6 col-lg-4 p-b-50">
+      <div className="col-sm-12 col-md-6 col-lg-4 p-b-50 response-card">
         {/* Block2 */}
-        <div className="block2">
+        <div className="block2 ">
           <div className="block2-img wrap-pic-w of-hidden pos-relative">
             <img src={url||"images/item-05.jpg"} alt="IMG-PRODUCT" />
             <div className="block2-overlay trans-0-4">
@@ -38,7 +41,7 @@ const ProductCardWithInfo = props => {
             >
               {name||"Chưa có tên"}
             </a>
-            <span className="block2-price m-text6 p-r-5">{price||"Liên hệ"}</span>
+            <span className="block2-price m-text6 p-r-5">{OpitmizeNumber(price) + " VND"}</span>
           </div>
         </div>
       </div>

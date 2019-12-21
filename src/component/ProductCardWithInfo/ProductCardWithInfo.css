@@ -1,3 +1,21 @@
-.m-text6{
-    text-transform: unset;
+.m-text6 {
+  text-transform: unset;
 }
+
+.block2-price {
+  /* color: tomato; */
+  font-weight: 700;
+}
+
+@media (min-width: 320px) {
+  .response-card {
+    width: 50%;
+  }
+}
+
+@media (min-width: 720px) {
+    .response-card {
+      width: 25%;
+    }
+  }
+  

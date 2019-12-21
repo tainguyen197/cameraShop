@@ -18,11 +18,16 @@ const ProductPage = props => {
   });
 
   const [brandFilter, setBrandFilter] = useState("All");
-  const [moneyFilter, setmoneyFilter] = useState("All");
-
+  const [moneyFilter, setmoneyFilter] = useState(-1);
+  const [isResetFilter, setIsResetFilter] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  console.log(currentPage);
+  
   useEffect(() => {
     dispatch(productAction.loadProduct());
   }, []);
+
+  const itemPerPage = 15;
 
   const listBrandOptions = brands.brands.map(item => item.name);
 
@@ -33,12 +38,37 @@ const ProductPage = props => {
     "Trên 20 triệu"
   ];
 
+  const listMoneyRange = [
+    { from: 0, to: 5 },
+    { from: 5, to: 10 },
+    { from: 10, to: 20 },
+    { from: 20, to: 1000 }
+  ];
+
+  const unitVND = 1000000;
+
   const listCardFilter = (data || []).filter(
-    item =>
-      item.brand === brandFilter.toLocaleLowerCase()
+    (item, index) =>{
+      if((item.brand === brandFilter.toLocaleLowerCase() ||
+        brandFilter === "All") &&
+      (moneyFilter === -1 ||
+        (item.price >= listMoneyRange[moneyFilter].from * unitVND &&
+          item.price <= listMoneyRange[moneyFilter].to * unitVND)) 
+      )
+      return item;
+        }
   );
 
-  const listCardWithInfoList = listCardFilter.map((item, index) => (
+  const listCard = (listCardFilter||[]).filter((item,index)=>{
+    if (index >= currentPage * itemPerPage - itemPerPage &&
+          index < currentPage * itemPerPage){
+           return item;  
+
+          }
+  });
+  console.log(listCard);
+  
+  const listCardWithInfoList = listCard.map((item, index) => (
     <ProductCardWithInfo
       key={index}
       url={item.images[0]}
@@ -46,14 +76,24 @@ const ProductPage = props => {
       price={item.price}
     />
   ));
+
   const onBrandChange = e => {
-    console.log(e.target.textContent);
+    setIsResetFilter(false);
 
     setBrandFilter(e.target.textContent);
   };
 
-  const onMoneyChange = e => {
-    console.log(e.target.textContent);
+  const onMoneyChange = (e, index) => {
+    setIsResetFilter(false);
+
+    setmoneyFilter(index);
+  };
+
+  const resetFilter = () => {
+    setBrandFilter("All");
+    setmoneyFilter(-1);
+    setIsResetFilter(true);
+    setCurrentPage(1)
   };
 
   return (
@@ -69,11 +109,13 @@ const ProductPage = props => {
                   values={listBrandOptions}
                   onChange={onBrandChange}
                   label="Thương hiệu"
+                  isReset={isResetFilter}
                 />
                 <FilterList
                   values={listMoneyRangeOptions}
                   onChange={onMoneyChange}
                   label="Giá tiền"
+                  isReset={isResetFilter}
                 />
               </div>
             </div>
@@ -86,24 +128,31 @@ const ProductPage = props => {
                 <Fragment>
                   <div className="flex-sb-m flex-w p-b-35">
                     <span className="s-text8 p-t-5 p-b-5">
-                      Đang hiển thị 1–15 trong {listCardWithInfoList.length} kết
+                      Đang hiển thị {listCard.length} trong {listCardFilter.length} kết
                       quả
                     </span>
-                    <span className="s-text8 p-t-5 p-b-5">
-                      <strong>Xóa tất cả tìm kiếm</strong>
+                    <span
+                      onClick={resetFilter}
+                      style={{ cursor: "pointer" }}
+                      className="s-text8 p-t-5 p-b-5 reset-filter"
+                    >
+                      <strong>Reset kết quả tìm kiếm</strong>
                     </span>
                   </div>
 
                   {/* Product */}
                   <div className="row">{listCardWithInfoList}</div>
-                  <Pagination />
+                  <Pagination
+                    onChange={e=>setCurrentPage(e.target.textContent)}
+                    total={Math.ceil(listCardFilter ? listCardFilter.length / itemPerPage : 0)}
+                    currentPage={currentPage}
+                  />
                 </Fragment>
               )}
             </div>
           </div>
         </div>
       </div>
-      }
     </Fragment>
   );
 };
