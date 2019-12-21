@@ -13,23 +13,24 @@ const Homepage = props => {
     return store.product;
   });
 
+
   useEffect(() => {
     dispatch(productAction.loadProduct());
   }, []);
 
   const listProduct = productStore.data ? productStore.data : [];
+  console.log(listProduct);
+  
   const saleListProduct = listProduct.map(product => {
     if (product.type === "sale") return <ProductCard image={product.images[0]?product.images[0]:undefined}/>;
   });
-
-  // const listHero = brandStore.data?brandStore.data.map(item => (
-  //   <div className="hero-banner">
-  //     <img src={item.src[0]} alt="IMG-BENNER" />
-  //   </div>
-  // )):[];
+  
+  const listHero = new Array()
+  listHero.push('/images/hero/banner2.jpg');
+  listHero.push('/images/hero/banner3.jpg');
   return (
     <Fragment>
-      <Hero></Hero>
+      <Hero values={listHero}></Hero>
       <SectionBrands></SectionBrands>
       <SectionListProducts
         items={saleListProduct}

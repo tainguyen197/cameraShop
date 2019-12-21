@@ -47,7 +47,7 @@ const ProductPage = props => {
 
   const unitVND = 1000000;
 
-  const listCardFilter = (data || []).filter(
+  const listCardFilter = data?data.filter(
     (item, index) =>{
       if((item.brand === brandFilter.toLocaleLowerCase() ||
         brandFilter === "All") &&
@@ -57,19 +57,21 @@ const ProductPage = props => {
       )
       return item;
         }
-  );
+  ):[];
 
-  const listCard = (listCardFilter||[]).filter((item,index)=>{
+  const listCard = listCardFilter?listCardFilter.filter((item,index)=>{
     if (index >= currentPage * itemPerPage - itemPerPage &&
           index < currentPage * itemPerPage){
            return item;  
 
           }
-  });
+  }):[];
   console.log(listCard);
   
   const listCardWithInfoList = listCard.map((item, index) => (
     <ProductCardWithInfo
+    brand={item.brand}
+    id={item.id}
       key={index}
       url={item.images[0]}
       name={item.name}

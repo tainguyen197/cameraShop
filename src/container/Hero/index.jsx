@@ -3,27 +3,29 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { Carousel } from "react-responsive-carousel";
 import * as heroAction from "../../action/hero";
-import './hero.css'
+import "./hero.css";
 const Hero = props => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const heroStore = useSelector(store => {
-    return store.hero;
-  });
+  // const heroStore = useSelector(store => {
+  //   return store.hero;
+  // });
 
-  useEffect(() => {
-    dispatch(heroAction.loadHero());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(heroAction.loadHero());
+  // }, []);
+  console.log(props.values);
 
-  const data = heroStore.data
-    ? heroStore.data.map(item => <img src={item} alt="banner" />)
-    : [1, 2, 3].map(item => (
-        <img src="/images/hero/banner2.jpg" alt="banner" />
-      ));
+  const data = props.values
+    ? props.values.map(item => {
+        return <img src={item} alt="banner" />;
+      })
+    : [];
 
   return (
     <Fragment>
       <Carousel
+        className={props.className}
         showThumbs={props.showThumbs ? props.showThumbs : false}
         showStatus={false}
         autoPlay

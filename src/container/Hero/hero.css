@@ -5,6 +5,14 @@
     object-position: center;
 }
 
+.detail-product-img .carousel .slide img{
+  height: 100%;
+  object-fit: contain;
+}
+
+.detail-product-img .carousel-slider{
+  max-height: 65vh;
+}
 @media only screen and (max-width: 425px) {
   .carousel .slide img{
     height: 100%;

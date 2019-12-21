@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import {OpitmizeNumber} from '../../config/optimizeMoney'
 import './ProductCardWithInfo.css'
+import { Link } from "react-router-dom";
 const ProductCardWithInfo = props => {
-  const {url,name,title,price} = props;
-  console.log(OpitmizeNumber(price));
-  
+  const {url,name,price,id,brand} = props;
+  const path = "/chi-tiet?id=" + id + "&brand=" + brand;
   return (
     <Fragment>
       <div className="col-sm-12 col-md-6 col-lg-4 p-b-50 response-card">
@@ -28,9 +28,12 @@ const ProductCardWithInfo = props => {
               </a>
               <div className="block2-btn-addcart w-size1 trans-0-4">
                 {/* Button */}
-                <button className="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                <Link to={path}>
+                <a href="#"> <button className="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
                   Xem chi tiết
                 </button>
+                </a>
+                </Link>
               </div>
             </div>
           </div>
