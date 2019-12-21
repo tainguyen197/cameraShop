@@ -5,6 +5,7 @@ import ProductCard from "../component/ProductCard/index";
 import DropdownContent from "../component/DropdownContent/index";
 import Breakcumb from "../component/Breadcrumb/index";
 import "./DetailProductPage.css";
+
 const DetailProductPage = () => {
   const FeaturedItems = [
     <ProductCard />,

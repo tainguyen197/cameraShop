@@ -1,12 +1,17 @@
-import React, { Fragment } from "react";
-
+import React, { Fragment, useState } from "react";
+import './FilterList.css'
 const FilterList = props => {
-  const listOption = (Array.isArray(props.values)?props.values:[]).map(item => (
-    <li className="p-t-4">
-      {/* active1 */}
-      <a href="#" className="s-text13"> 
+  const {onChange} = props;
+  const [selectedItem, setSelectedItem] = useState(-1);
+  const onChangeValue= (e,index) =>{
+    onChange(e);
+    setSelectedItem(index)
+  }
+  const listOption = (Array.isArray(props.values)?props.values:[]).map((item, index) => (
+    <li className="p-t-4" key={index}>
+      <p onClick={e=>onChangeValue(e,index)} href="#" className={selectedItem === index?"s-text13 filter-active" : "s-text13"}> 
         {item}
-      </a>
+      </p>
     </li>
   ))
   return (

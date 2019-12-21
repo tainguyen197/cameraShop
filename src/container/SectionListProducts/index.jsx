@@ -28,10 +28,10 @@ const SectionListProducts = props => {
         <div className='alice-carousel-box'>
         <AliceCarousel
           buttonsDisabled={true}
-          // infinite={true}
+          infinite={true}
           keysControlDisabled={true}
-          // autoPlay={true}
-          autoPlayInterval={2000}
+          autoPlay={true}
+          autoPlayInterval={4000}
           fadeOutAnimation={true}
           items={props.items}
           mouseTrackingEnabled={mouseTrackingEnabled}

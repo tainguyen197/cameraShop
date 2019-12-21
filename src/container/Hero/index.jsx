@@ -26,8 +26,8 @@ const Hero = props => {
       <Carousel
         showThumbs={props.showThumbs ? props.showThumbs : false}
         showStatus={false}
-        // autoPlay
-        interval={1000}
+        autoPlay
+        interval={3000}
         infiniteLoop
       >
         {data}

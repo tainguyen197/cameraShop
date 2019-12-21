@@ -7,3 +7,16 @@
       object-fit:  cover;
       object-position: center;
   }
+
+  .block2-img{
+      width: 200px;
+      height: 200px;
+  }
+
+  @media (min-width: 992px){
+  .col-lg-4 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
