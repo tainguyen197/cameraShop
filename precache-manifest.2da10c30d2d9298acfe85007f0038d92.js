@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5e8c112a9f8764d6af18d78bfee339cc",
+    "revision": "85009fa516dec3be994784730a7d7013",
     "url": "/cameraShop/index.html"
   },
   {
-    "revision": "5f6fc9d3dbce05396507",
+    "revision": "9c23413bace070b4b2bb",
     "url": "/cameraShop/static/css/2.dcfc59fc.chunk.css"
   },
   {
-    "revision": "07e385ba7f997b8ab85b",
+    "revision": "d62108949bc846a00730",
     "url": "/cameraShop/static/css/main.fad37493.chunk.css"
   },
   {
-    "revision": "5f6fc9d3dbce05396507",
-    "url": "/cameraShop/static/js/2.7bf846dc.chunk.js"
+    "revision": "9c23413bace070b4b2bb",
+    "url": "/cameraShop/static/js/2.d3c56053.chunk.js"
   },
   {
     "revision": "f8325d336fa956780f66870e00d58912",
-    "url": "/cameraShop/static/js/2.7bf846dc.chunk.js.LICENSE"
+    "url": "/cameraShop/static/js/2.d3c56053.chunk.js.LICENSE"
   },
   {
-    "revision": "07e385ba7f997b8ab85b",
-    "url": "/cameraShop/static/js/main.f168bfd5.chunk.js"
+    "revision": "d62108949bc846a00730",
+    "url": "/cameraShop/static/js/main.8065d4bf.chunk.js"
   },
   {
     "revision": "80574aae11688f89ae20",
