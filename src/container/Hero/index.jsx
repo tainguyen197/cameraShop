@@ -28,7 +28,7 @@ const Hero = props => {
         className={props.className}
         showThumbs={props.showThumbs ? props.showThumbs : false}
         showStatus={false}
-        autoPlay
+        // autoPlay
         interval={3000}
         infiniteLoop
       >

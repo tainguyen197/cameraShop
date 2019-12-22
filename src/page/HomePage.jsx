@@ -13,21 +13,39 @@ const Homepage = props => {
     return store.product;
   });
 
-
   useEffect(() => {
     dispatch(productAction.loadProduct());
   }, []);
 
   const listProduct = productStore.data ? productStore.data : [];
   console.log(listProduct);
-  
-  const saleListProduct = listProduct.map(product => {
-    if (product.type === "sale") return <ProductCard image={product.images[0]?product.images[0]:undefined}/>;
+
+  const saleList = listProduct.filter(product => {
+    return product.type === "sale";
   });
-  
-  const listHero = new Array()
-  listHero.push('/images/hero/banner2.jpg');
-  listHero.push('/images/hero/banner3.jpg');
+
+  const saleListProduct = saleList.map(product => (
+    <ProductCard
+      {...product}
+      image={product.images[0] ? product.images[0] : "/images/banner-05.jpg"}
+    />
+  ));
+
+  const featuredList = saleList.filter(product => {
+    return product.type === "sale";
+  });
+
+  const featuredListProduct = featuredList.map(product => (
+    <ProductCard
+      {...product}
+      // name={product.name}
+      image={product.images[0] ? product.images[0] : "/images/banner-05.jpg"}
+    />
+  ));
+  const listHero = new Array();
+  listHero.push("/images/hero/banner2.jpg");
+  listHero.push("/images/hero/banner3.jpg");
+
   return (
     <Fragment>
       <Hero values={listHero}></Hero>
@@ -37,7 +55,7 @@ const Homepage = props => {
         title="Sản phẩm bán chạy"
       ></SectionListProducts>
       <SectionListProducts
-        items={saleListProduct}
+        items={featuredListProduct}
         title="Đang giảm giá"
       ></SectionListProducts>
     </Fragment>

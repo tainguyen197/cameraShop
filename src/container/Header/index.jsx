@@ -71,41 +71,18 @@ const Header = props => {
           <nav className="side-menu">
             <ul className="main-menu">
               <li className="item-menu-mobile">
-                <a href="index.html">Home</a>
-                <ul className="sub-menu">
-                  <li>
-                    <a href="index.html">Homepage V1</a>
-                  </li>
-                  <li>
-                    <a href="home-02.html">Homepage V2</a>
-                  </li>
-                  <li>
-                    <a href="home-03.html">Homepage V3</a>
-                  </li>
-                </ul>
-                <i
-                  className="arrow-main-menu fa fa-angle-right"
-                  aria-hidden="true"
-                />
+                <a href="index.html">Trang chủ</a>
               </li>
               <li className="item-menu-mobile">
-                <a href="product.html">Shop</a>
+                <Link to="/san-pham">Sản phẩm</Link>
               </li>
               <li className="item-menu-mobile">
-                <a href="product.html">Sale</a>
+                <Link to="/san-pham">Về chúng tôi</Link>
               </li>
               <li className="item-menu-mobile">
-                <a href="cart.html">Features</a>
+                <Link to="/san-pham">Liên hệ</Link>
               </li>
-              <li className="item-menu-mobile">
-                <a href="blog.html">Blog</a>
-              </li>
-              <li className="item-menu-mobile">
-                <a href="about.html">About</a>
-              </li>
-              <li className="item-menu-mobile">
-                <a href="contact.html">Contact</a>
-              </li>
+            
             </ul>
           </nav>
         </div>

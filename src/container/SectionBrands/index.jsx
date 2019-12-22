@@ -20,6 +20,9 @@ const SectionBrand = props => {
     <Fragment>
       <section className="banner bgwhite p-t-40 p-b-40">
         <div className="container">
+          <div className="sec-title p-b-60">
+            <h3 className="m-text5 t-center">Các thương hiệu</h3>
+          </div>
           <div className="row">
             <div className="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
               {/* block1 */}

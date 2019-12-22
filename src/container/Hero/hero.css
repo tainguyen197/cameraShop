@@ -11,7 +11,7 @@
 }
 
 .detail-product-img .carousel-slider{
-  max-height: 65vh;
+  /* max-height: 65vh; */
 }
 @media only screen and (max-width: 425px) {
   .carousel .slide img{
@@ -21,4 +21,15 @@
     object-position: center;
   }
 
+}
+@media (max-width: 768px){
+  .respon5{
+    width: 45%;
+  }
+  }
+
+@media (max-width: 425px){
+.respon5{
+  width: 100%;
+}
 }

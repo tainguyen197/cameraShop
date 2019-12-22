@@ -16,26 +16,12 @@ const DetailProductPage = () => {
   },[])
 
   useEffect(()=> {
-    // if(window.location.search==="")
     const urlParams = new URLSearchParams(window.location.search);
     const brand = urlParams.get('brand');
     const id = urlParams.get('id');
-    // console.log(brand,id);
-
     TODO: //Redirec sang trang sản phẩm
     dispatch(loadProductWithIdAndBrand(id,brand))
   },[])
-
-  // console.log(data);
-  
-  const FeaturedItems = [
-    <ProductCard />,
-    <ProductCard />,
-    <ProductCard />,
-    <ProductCard />,
-    <ProductCard />,
-    <ProductCard />
-  ];
 
   const listHero =data? (data.images || []).map(item => {
     console.log(item);
@@ -90,14 +76,14 @@ const DetailProductPage = () => {
   return (
     <Fragment>
       {/* <Breakcumb /> */}
-      <div className="container bgwhite p-t-35 p-b-80">
+      <div className="container bgwhite p-b-80">
         <div className="flex-w flex-sb">
           <div className="w-size13 p-t-30 respon5">
             <Hero className="detail-product-img" showThumbs={true} values={data?data[0].images:null}></Hero>
           </div>
           <div className="w-size14 p-t-30 respon5">
             <h4 className="product-detail-name m-text16 p-b-13">
-              {data?data.name:"Chưa có tên"}
+              {data?ReactHtmlParser(data[0].name):"Chưa có tên"}
             </h4>
             <span className="m-text17">{data?OpitmizeNumber(data[0].price) + " VND":"Giá liên hệ"}</span>
 
@@ -128,10 +114,6 @@ const DetailProductPage = () => {
           </div>
         </div>
       </div>
-      <SectionListProducts
-        items={FeaturedItems}
-        title="Sản phẩm bán chạy"
-      ></SectionListProducts>
     </Fragment>
   );
 };

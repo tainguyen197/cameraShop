@@ -1,0 +1,17 @@
+.content-product-card{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.product-card-img-box .img-product{
+    width: 100%;
+    /* min-height:220px; */
+}
+
+.content-product-card p{
+    min-height: 40px;
+}
+
+.block2-overlay:hover .block2-btn-addcart{
+    bottom: 100px;
+}
