@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "85009fa516dec3be994784730a7d7013",
+    "revision": "a663300bf6869a4c91e29b3495a81bec",
     "url": "/cameraShop/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cameraShop/static/css/2.dcfc59fc.chunk.css"
   },
   {
-    "revision": "d62108949bc846a00730",
-    "url": "/cameraShop/static/css/main.fad37493.chunk.css"
+    "revision": "1516b2cd98746f9177cc",
+    "url": "/cameraShop/static/css/main.a0904707.chunk.css"
   },
   {
     "revision": "9c23413bace070b4b2bb",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cameraShop/static/js/2.d3c56053.chunk.js.LICENSE"
   },
   {
-    "revision": "d62108949bc846a00730",
+    "revision": "1516b2cd98746f9177cc",
     "url": "/cameraShop/static/js/main.8065d4bf.chunk.js"
   },
   {

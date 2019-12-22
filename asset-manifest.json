@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/cameraShop/static/css/main.fad37493.chunk.css",
+    "main.css": "/cameraShop/static/css/main.a0904707.chunk.css",
     "main.js": "/cameraShop/static/js/main.8065d4bf.chunk.js",
     "main.js.map": "/cameraShop/static/js/main.8065d4bf.chunk.js.map",
     "runtime-main.js": "/cameraShop/static/js/runtime-main.3b2dc8df.js",
@@ -9,10 +9,10 @@
     "static/js/2.d3c56053.chunk.js": "/cameraShop/static/js/2.d3c56053.chunk.js",
     "static/js/2.d3c56053.chunk.js.map": "/cameraShop/static/js/2.d3c56053.chunk.js.map",
     "index.html": "/cameraShop/index.html",
-    "precache-manifest.2da10c30d2d9298acfe85007f0038d92.js": "/cameraShop/precache-manifest.2da10c30d2d9298acfe85007f0038d92.js",
+    "precache-manifest.5f1c5a84acfc53b18ab9084fe14622c8.js": "/cameraShop/precache-manifest.5f1c5a84acfc53b18ab9084fe14622c8.js",
     "service-worker.js": "/cameraShop/service-worker.js",
     "static/css/2.dcfc59fc.chunk.css.map": "/cameraShop/static/css/2.dcfc59fc.chunk.css.map",
-    "static/css/main.fad37493.chunk.css.map": "/cameraShop/static/css/main.fad37493.chunk.css.map",
+    "static/css/main.a0904707.chunk.css.map": "/cameraShop/static/css/main.a0904707.chunk.css.map",
     "static/js/2.d3c56053.chunk.js.LICENSE": "/cameraShop/static/js/2.d3c56053.chunk.js.LICENSE",
     "static/media/logo.svg": "/cameraShop/static/media/logo.5d5d9eef.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.3b2dc8df.js",
     "static/css/2.dcfc59fc.chunk.css",
     "static/js/2.d3c56053.chunk.js",
-    "static/css/main.fad37493.chunk.css",
+    "static/css/main.a0904707.chunk.css",
     "static/js/main.8065d4bf.chunk.js"
   ]
 }
