@@ -25,10 +25,10 @@ const Header = props => {
                     <Link to="/san-pham">Sản phẩm</Link>
                   </li>
                   <li className="sale-noti">
-                    <a href="product.html">Về chúng tôi</a>
+                    <Link href="/san-pham">Về chúng tôi</Link>
                   </li>
                   <li>
-                    <Link to="/chi-tiet">Liên hệ</Link>
+                    <Link to="/san-pham">Liên hệ</Link>
                   </li>
                 </ul>
               </nav>
@@ -71,7 +71,7 @@ const Header = props => {
           <nav className="side-menu">
             <ul className="main-menu">
               <li className="item-menu-mobile">
-                <a href="index.html">Trang chủ</a>
+                <Link to="/">Trang chủ</Link>
               </li>
               <li className="item-menu-mobile">
                 <Link to="/san-pham">Sản phẩm</Link>
