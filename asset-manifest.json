@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/cameraShop/static/css/main.1fcec0fc.chunk.css",
-    "main.js": "/cameraShop/static/js/main.641589bb.chunk.js",
-    "main.js.map": "/cameraShop/static/js/main.641589bb.chunk.js.map",
+    "main.css": "/cameraShop/static/css/main.876dd19b.chunk.css",
+    "main.js": "/cameraShop/static/js/main.7dd653d0.chunk.js",
+    "main.js.map": "/cameraShop/static/js/main.7dd653d0.chunk.js.map",
     "runtime-main.js": "/cameraShop/static/js/runtime-main.3b2dc8df.js",
     "runtime-main.js.map": "/cameraShop/static/js/runtime-main.3b2dc8df.js.map",
     "static/css/2.dcfc59fc.chunk.css": "/cameraShop/static/css/2.dcfc59fc.chunk.css",
     "static/js/2.7bf846dc.chunk.js": "/cameraShop/static/js/2.7bf846dc.chunk.js",
     "static/js/2.7bf846dc.chunk.js.map": "/cameraShop/static/js/2.7bf846dc.chunk.js.map",
     "index.html": "/cameraShop/index.html",
-    "precache-manifest.fc2339d7eb482889b8a3a145ddf5823d.js": "/cameraShop/precache-manifest.fc2339d7eb482889b8a3a145ddf5823d.js",
+    "precache-manifest.308895f95669699967dcf47ed2b5ff9a.js": "/cameraShop/precache-manifest.308895f95669699967dcf47ed2b5ff9a.js",
     "service-worker.js": "/cameraShop/service-worker.js",
     "static/css/2.dcfc59fc.chunk.css.map": "/cameraShop/static/css/2.dcfc59fc.chunk.css.map",
-    "static/css/main.1fcec0fc.chunk.css.map": "/cameraShop/static/css/main.1fcec0fc.chunk.css.map",
+    "static/css/main.876dd19b.chunk.css.map": "/cameraShop/static/css/main.876dd19b.chunk.css.map",
     "static/js/2.7bf846dc.chunk.js.LICENSE": "/cameraShop/static/js/2.7bf846dc.chunk.js.LICENSE",
     "static/media/logo.svg": "/cameraShop/static/media/logo.5d5d9eef.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.3b2dc8df.js",
     "static/css/2.dcfc59fc.chunk.css",
     "static/js/2.7bf846dc.chunk.js",
-    "static/css/main.1fcec0fc.chunk.css",
-    "static/js/main.641589bb.chunk.js"
+    "static/css/main.876dd19b.chunk.css",
+    "static/js/main.7dd653d0.chunk.js"
   ]
 }
