@@ -13,7 +13,7 @@
 .detail-product-img .carousel-slider{
   /* max-height: 65vh; */
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
   .carousel .slide img{
     height: 100%;
     width: 100%;
