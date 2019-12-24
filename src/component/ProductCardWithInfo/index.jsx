@@ -11,7 +11,7 @@ const ProductCardWithInfo = props => {
         {/* Block2 */}
         <div className="block2 ">
           <div className="block2-img wrap-pic-w of-hidden pos-relative">
-            <img src={url||"cameraShop/images/item-05.jpg"} alt="IMG-PRODUCT" />
+            <img src={url||"/images/item-05.jpg"} alt="IMG-PRODUCT" />
             <div className="block2-overlay trans-0-4">
               <a
                 href="#"

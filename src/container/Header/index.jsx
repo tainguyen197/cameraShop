@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./header.css";
 const Header = props => {
   const [mobileMenuShow, setmobileMenuShow] = useState(false);
@@ -25,10 +25,10 @@ const Header = props => {
                     <Link to="/san-pham">Sản phẩm</Link>
                   </li>
                   <li className="sale-noti">
-                    <Link href="/san-pham">Về chúng tôi</Link>
+                    <Link href="/gioi-thieu">Về chúng tôi</Link>
                   </li>
                   <li>
-                    <Link to="/san-pham">Liên hệ</Link>
+                    <Link to="/lien-he">Liên hệ</Link>
                   </li>
                 </ul>
               </nav>
@@ -71,16 +71,16 @@ const Header = props => {
           <nav className="side-menu">
             <ul className="main-menu">
               <li className="item-menu-mobile">
-                <Link to="/">Trang chủ</Link>
+                <NavLink to="/">Trang chủ</NavLink>
               </li>
               <li className="item-menu-mobile">
                 <Link to="/san-pham">Sản phẩm</Link>
               </li>
               <li className="item-menu-mobile">
-                <Link to="/san-pham">Về chúng tôi</Link>
+                <Link to="/gioi-thieu">Về chúng tôi</Link>
               </li>
               <li className="item-menu-mobile">
-                <Link to="/san-pham">Liên hệ</Link>
+                <Link to="/lien-he">Liên hệ</Link>
               </li>
             
             </ul>

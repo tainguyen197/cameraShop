@@ -27,7 +27,7 @@ const Homepage = props => {
   const saleListProduct = saleList.map(product => (
     <ProductCard
       {...product}
-      image={product.images[0] ? product.images[0] : "cameraShop/images/banner-05.jpg"}
+      image={product.images[0] ? product.images[0] : "images/banner-05.jpg"}
     />
   ));
 
@@ -39,12 +39,12 @@ const Homepage = props => {
     <ProductCard
       {...product}
       // name={product.name}
-      image={product.images[0] ? product.images[0] : "cameraShop/images/banner-05.jpg"}
+      image={product.images[0] ? product.images[0] : "images/banner-05.jpg"}
     />
   ));
   const listHero = new Array();
-  listHero.push("cameraShop/images/hero/banner2.jpg");
-  listHero.push("cameraShop/images/hero/banner3.jpg");
+  listHero.push("images/hero/banner2.jpg");
+  listHero.push("images/hero/banner3.jpg");
 
   return (
     <Fragment>
