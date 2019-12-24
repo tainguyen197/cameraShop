@@ -12,7 +12,9 @@ const ContactPage = () => {
         </div>
         <div className="row">
           <div className="col-md-6 p-b-30">
+          {/* <div className="contact-map size21"> */}
             <GoogleMapReact
+            
                bootstrapURLKeys={{ key:"AIzaSyAoBGukMgWP82wOqAaDqkXeslb9V4jXH28" }}
               defaultCenter={{lat:10.776530,lng:106.700980}}
               defaultZoom={16}
@@ -23,6 +25,7 @@ const ContactPage = () => {
             text="My Marker"
           />
         </GoogleMapReact>
+        {/* </div> */}
           </div>
           <div className="col-md-6 p-b-30">
               <h4 className="m-text26 p-b-36 p-t-15">Địa chỉ</h4>

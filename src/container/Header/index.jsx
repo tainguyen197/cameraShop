@@ -12,7 +12,7 @@ const Header = props => {
           <div className="wrap_header">
             {/* Logo */}
             <a href="index.html" className="logo">
-              <img src="images/icons/logo.png" alt="IMG-LOGO" />
+              <img src="images/icons/logo.jpg" alt="IMG-LOGO" />
             </a>
             {/* Menu */}
             <div className="wrap_menu">
@@ -25,7 +25,7 @@ const Header = props => {
                     <Link to="/san-pham">Sản phẩm</Link>
                   </li>
                   <li className="sale-noti">
-                    <Link href="/gioi-thieu">Về chúng tôi</Link>
+                    <Link to="/gioi-thieu">Về chúng tôi</Link>
                   </li>
                   <li>
                     <Link to="/lien-he">Liên hệ</Link>
@@ -40,7 +40,7 @@ const Header = props => {
         <div className="wrap_header_mobile">
           {/* Logo moblie */}
           <a href="index.html" className="logo-mobile">
-            <img src="images/icons/logo.png" alt="IMG-LOGO" />
+            <img src="images/icons/logo.jpg" alt="IMG-LOGO" />
           </a>
           {/* Button show menu */}
           <div className="btn-show-menu">
