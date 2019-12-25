@@ -1,16 +1,18 @@
 .animation-menu {
     -webkit-animation: example 2s; /* Safari 4.0 - 8.0 */
-     animation: example 2s;
+     animation: example 1s;
+     overflow: hidden;
   }
   
+
   /* Safari 4.0 - 8.0 */
   @-webkit-keyframes example {
     from {height: 0}
-    to {height: 100%;}
+    to {height: 169px;}
   }
   
   /* Standard syntax */
   @keyframes example {
     from {height: 0;}
-    to {height: 100%}
+    to {height: 169px}
   }

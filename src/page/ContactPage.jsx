@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleMapReact from 'google-map-react'
-
+import "./ContactPage.css"
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const ContactPage = () => {
@@ -11,11 +11,10 @@ const ContactPage = () => {
           <h3 class="m-text5 t-center">Liên hệ</h3>
         </div>
         <div className="row">
-          <div className="col-md-6 p-b-30">
+          <div className="col-md-6 p-b-30 map-mobile">
           {/* <div className="contact-map size21"> */}
             <GoogleMapReact
-            
-               bootstrapURLKeys={{ key:"AIzaSyAoBGukMgWP82wOqAaDqkXeslb9V4jXH28" }}
+              bootstrapURLKeys={{ key:"AIzaSyAoBGukMgWP82wOqAaDqkXeslb9V4jXH28" }}
               defaultCenter={{lat:10.776530,lng:106.700980}}
               defaultZoom={16}
         >

@@ -1,8 +1,30 @@
-import React, { Fragment, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { Fragment, useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./header.css";
 const Header = props => {
   const [mobileMenuShow, setmobileMenuShow] = useState(false);
+  const [selected, setSelect] = useState();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    switch (pathname) {
+      case "/":
+        setSelect(0);
+        break;
+      case "/san-pham":
+        setSelect(1);
+        break;
+      case "/gioi-thieu":
+        setSelect(2);
+        break;
+      case "/lien-he":
+        setSelect(3);
+        break;
+      default:
+        setSelect(-1);
+        break;
+    }
+  }, []);
 
   return (
     <Fragment>
@@ -11,23 +33,39 @@ const Header = props => {
         <div className="container-menu-header">
           <div className="wrap_header">
             {/* Logo */}
-            <a href="index.html" className="logo">
+            <Link to="/" className="logo">
               <img src="images/icons/logo.jpg" alt="IMG-LOGO" />
-            </a>
+            </Link>
             {/* Menu */}
             <div className="wrap_menu">
               <nav className="menu">
                 <ul className="main_menu">
-                  <li>
+                  <li
+                    key={0}
+                    className={selected === 0 ? "sale-noti" : ""}
+                    onClick={() => setSelect(0)}
+                  >
                     <Link to="/">Trang chủ</Link>
                   </li>
-                  <li>
+                  <li
+                    key={1}
+                    className={selected === 1 ? "sale-noti" : ""}
+                    onClick={() => setSelect(1)}
+                  >
                     <Link to="/san-pham">Sản phẩm</Link>
                   </li>
-                  <li className="sale-noti">
+                  <li
+                    key={2}
+                    className={selected === 2 ? "sale-noti" : ""}
+                    onClick={() => setSelect(2)}
+                  >
                     <Link to="/gioi-thieu">Về chúng tôi</Link>
                   </li>
-                  <li>
+                  <li
+                    key={3}
+                    className={selected === 3 ? "sale-noti" : ""}
+                    onClick={() => setSelect(3)}
+                  >
                     <Link to="/lien-he">Liên hệ</Link>
                   </li>
                 </ul>
@@ -39,9 +77,9 @@ const Header = props => {
         {/* Header Mobile */}
         <div className="wrap_header_mobile">
           {/* Logo moblie */}
-          <a href="index.html" className="logo-mobile">
+          <Link to="/" className="logo-mobile">
             <img src="images/icons/logo.jpg" alt="IMG-LOGO" />
-          </a>
+          </Link>
           {/* Button show menu */}
           <div className="btn-show-menu">
             {/* Header Icon mobile */}
@@ -70,19 +108,18 @@ const Header = props => {
         >
           <nav className="side-menu">
             <ul className="main-menu">
-              <li className="item-menu-mobile">
+            <li key={0} className="item-menu-mobile" onClick={()=>{setmobileMenuShow(false)}}>
                 <NavLink to="/">Trang chủ</NavLink>
               </li>
-              <li className="item-menu-mobile">
+              <li key={1} className="item-menu-mobile" onClick={()=>{setmobileMenuShow(false)}}>
                 <Link to="/san-pham">Sản phẩm</Link>
               </li>
-              <li className="item-menu-mobile">
+              <li key={2} className="item-menu-mobile" onClick={()=>{setmobileMenuShow(false)}}>
                 <Link to="/gioi-thieu">Về chúng tôi</Link>
               </li>
-              <li className="item-menu-mobile">
+              <li key={3} className="item-menu-mobile" onClick={()=>{setmobileMenuShow(false)}}>
                 <Link to="/lien-he">Liên hệ</Link>
               </li>
-            
             </ul>
           </nav>
         </div>
