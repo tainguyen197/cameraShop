@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-
+import {Link} from 'react-router-dom'
 const Footer = () => {
   return (
     <Fragment>
@@ -58,24 +58,24 @@ const Footer = () => {
             <h4 className="s-text12 p-b-30">Liên kết</h4>
             <ul>
               <li className="p-b-9">
-                <a href="#" className="s-text7">
+                <Link to="/" className="s-text7">
                   Trang chủ
-                </a>
+                </Link>
               </li>
               <li className="p-b-9">
-                <a href="#" className="s-text7">
+                <Link to='/san-pham' className="s-text7">
                   Sản phẩm
-                </a>
+                </Link>
               </li>
               <li className="p-b-9">
-                <a href="#" className="s-text7">
+                <Link to='/gioi-thieu' className="s-text7">
                   Giới thiệu
-                </a>
+                </Link>
               </li>
               <li className="p-b-9">
-                <a href="#" className="s-text7">
+                <Link to='/lien-he' className="s-text7">
                   Liên hệ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -110,6 +110,21 @@ const SectionBrand = props => {
                 </div>
               </div>
               {/* block2 */}
+              <div className="block1 hov-img-zoom pos-relative m-b-30">
+                <img
+                  src={data ? data[3].src[0] : "images/banner-05.jpg"}
+                  alt="IMG-BENNER"
+                />
+                <div className="block1-wrapbtn w-size2">
+                  {/* Button */}
+                  <a
+                    href="#"
+                    className="flex-c-m size2 m-text2 bg3 hov1 trans-0-4"
+                  >
+                    {data ? data[4].name : "unName"}
+                  </a>
+                </div>
+              </div>
               </div>
           </div>
         </div>
