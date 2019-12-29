@@ -1,11 +1,13 @@
 import React, { Fragment, useMemo, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import Header from "../container/Header/index";
+import ProductBanner from "../container/ProductBanner"
+import PromoteBanner from "../component/Promote"
 import Hero from "../container/Hero/index";
 import SectionBrands from "../container/SectionBrands/index";
 import SectionListProducts from "../container/SectionListProducts";
 import ProductCard from "../component/ProductCard/index";
-import { useDispatch, useSelector } from "react-redux";
-import * as brandAction from "../action/brand";
 import * as productAction from "../action/product";
 const Homepage = props => {
   const dispatch = useDispatch();
@@ -18,7 +20,6 @@ const Homepage = props => {
   }, []);
 
   const listProduct = productStore.data ? productStore.data : [];
-  console.log(listProduct);
 
   const saleList = listProduct.filter(product => {
     return product.type === "sale";
@@ -50,10 +51,13 @@ const Homepage = props => {
     <Fragment>
       <Hero values={listHero}></Hero>
       <SectionBrands></SectionBrands>
+      <PromoteBanner></PromoteBanner>
+
       <SectionListProducts
         items={saleListProduct}
         title="Sản phẩm bán chạy"
       ></SectionListProducts>
+      <ProductBanner/>
       <SectionListProducts
         items={featuredListProduct}
         title="Đang giảm giá"

@@ -30,7 +30,7 @@ const SectionListProducts = props => {
           buttonsDisabled={true}
           infinite={true}
           keysControlDisabled={true}
-          // autoPlay={true}
+          autoPlay
           autoPlayInterval={4000}
           fadeOutAnimation={true}
           items={props.items}
