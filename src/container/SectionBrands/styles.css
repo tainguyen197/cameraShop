@@ -1,0 +1,19 @@
+.section-brand-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-brand-box .brand-box{
+    cursor: pointer;
+    margin: 0 10px;
+    height: 100px;
+    width: 150px;
+}
+
+.section-brand-box .brand-box img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+}

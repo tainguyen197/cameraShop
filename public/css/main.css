@@ -507,6 +507,9 @@ iframe {
 ///////////////////////////////////////////////////////////
 */
 .header1 {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   height: 80px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
