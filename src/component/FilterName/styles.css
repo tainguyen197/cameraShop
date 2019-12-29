@@ -1,0 +1,9 @@
+.input-name{
+    display: flex;
+    margin-bottom: 50px;
+    border-bottom: solid 2px tomato;
+}
+
+.input-name .input-box{
+    width: 85%;
+}

@@ -3,10 +3,15 @@ import PromoteBanner from "../component/Promote/index";
 import FilterList from "../component/FilterList/index";
 import ProductCardWithInfo from "../component/ProductCardWithInfo/index";
 import Pagination from "../component/Nagination/index";
+import FilterName from "../component/FilterName/index";
+import {useLocation,useHistory, useParams} from 'react-router-dom'
 import { storage } from "../config/config";
 import { useDispatch, useSelector } from "react-redux";
 import * as productAction from "../action/product";
 import ReactLoading from "react-loading";
+import useInput from "../hooks/useInput"
+import useSearchParams from "../hooks/useSearchParams"
+
 import brands from "../data/data.json";
 import "./ProductPage.css";
 
@@ -21,7 +26,13 @@ const ProductPage = props => {
   const [moneyFilter, setmoneyFilter] = useState(-1);
   const [isResetFilter, setIsResetFilter] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  console.log(currentPage);
+  
+  const {reset,onChange,value} = useInput();
+  const history = useHistory();
+  const param = useParams();
+  const {searchParams,putParam} = useSearchParams(history.location.search);
+
+  console.log(param);
   
   useEffect(() => {
     dispatch(productAction.loadProduct());
@@ -55,19 +66,19 @@ const ProductPage = props => {
         (item.price >= listMoneyRange[moneyFilter].from * unitVND &&
           item.price <= listMoneyRange[moneyFilter].to * unitVND)) 
       )
+      
       return item;
         }
   ):[];
 
-  const listCard = listCardFilter?listCardFilter.filter((item,index)=>{
+  let listCard = listCardFilter?listCardFilter.filter((item,index)=>{
     if (index >= currentPage * itemPerPage - itemPerPage &&
           index < currentPage * itemPerPage){
            return item;  
 
           }
   }):[];
-  console.log(listCard);
-  
+
   const listCardWithInfoList = listCard.map((item, index) => (
     <ProductCardWithInfo
     brand={item.brand}
@@ -79,16 +90,28 @@ const ProductPage = props => {
     />
   ));
 
+  const searchByName = ()=>{
+      
+      
+  }
+
   const onBrandChange = e => {
     setIsResetFilter(false);
-
     setBrandFilter(e.target.textContent);
+    // putParam('brand='+e.target.textContent.toLocaleLowerCase())
+    history.push({
+      pathname: '/san-pham',
+      search: '?brand='+e.target.textContent.toLocaleLowerCase()
+    })
+    
   };
 
   const onMoneyChange = (e, index) => {
     setIsResetFilter(false);
-
-    setmoneyFilter(index);
+    history.push({
+      pathname: '/san-pham',
+      search: history.location.search?history.location.search+ '&money='+e.target.textContent.toLocaleLowerCase(): '&money='+e.target.textContent.toLocaleLowerCase()
+    })
   };
 
   const resetFilter = () => {
@@ -98,6 +121,7 @@ const ProductPage = props => {
     setCurrentPage(1)
   };
 
+
   return (
     <Fragment>
       <PromoteBanner></PromoteBanner>
@@ -106,6 +130,9 @@ const ProductPage = props => {
           <div className="row">
             {/* left section */}
             <div className="col-sm-6 col-md-4 col-lg-3 p-b-50">
+            <div className="leftbar p-r-20 p-r-0-sm">
+            <FilterName onChange={onChange} reset={reset} value={value} searchByName={searchByName}/>
+            </div>
               <div className="leftbar p-r-20 p-r-0-sm">
                 <FilterList
                   values={listBrandOptions}

@@ -4,3 +4,7 @@
     height: 400px;
 }
 }
+
+.link-other:hover{
+    color: tomato;
+}

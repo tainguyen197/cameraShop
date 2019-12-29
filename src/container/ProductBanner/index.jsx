@@ -12,7 +12,7 @@ const ProductBanner = props => {
           <p>Phasellus? Praesentium occaecati diam molestias suspendisse eius eos repudiandae? Omnis tincidunt deserunt quas montes saepe autem? Tenetur molestiae? Necessitatibus class voluptatem nulla mollis velit, condimentum. Nibh consectetur iusto numquam iaculis ullam egestas deleniti, sed nisl egestas, odit sollicitudin, adipiscing malesuada aut accumsan ornare mollis. Taciti ullamco nonummy blanditiis fames morbi.</p>
         </div>
         <div className="img-product-box">
-            <button className="title-propduct s-text1 bg4 bo-rad-23 m-text3 size2" >
+            <button className="title-propduct s-text1 bg4 bo-rad-23 m-text3 size2 hov1" >
               Xem chi tiết
             </button>
           </div>

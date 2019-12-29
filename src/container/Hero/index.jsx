@@ -14,13 +14,16 @@ const Hero = props => {
   // useEffect(() => {
   //   dispatch(heroAction.loadHero());
   // }, []);
-  console.log(props.values);
-
   const data = props.values
     ? props.values.map(item => {
         return <img src={item} alt="banner" />;
       })
     : [];
+const onChange = (data) =>{
+  // console.log(data);
+  props.onChangeImage(data)
+}
+console.log('aa');
 
   return (
     <Fragment>
@@ -28,9 +31,12 @@ const Hero = props => {
         className={props.className}
         showThumbs={props.showThumbs ? props.showThumbs : false}
         showStatus={false}
-        autoPlay
-        interval={3000}
-        infiniteLoop
+        selectedItem={props.value}
+        // autoPlay={true}
+        onChange={onChange}
+        // interval="100"
+        // transitionTime={50}
+        // infiniteLoop
       >
         {data}
       </Carousel>

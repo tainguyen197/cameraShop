@@ -9,8 +9,10 @@ import { useSelector,useDispatch } from "react-redux";
 import {loadProductWithIdAndBrand} from '../action/product'
 import {OpitmizeNumber} from "../config/optimizeMoney"
 import ReactHtmlParser from "react-html-parser"
+import { useState } from "react";
 const DetailProductPage = () => {
   const dispatch = useDispatch();
+  const [selectedImg, setSelectedImg] = useState(0)
   const {loading,data,error} = useSelector(store=>{
     return store.product;
   },[])
@@ -34,7 +36,14 @@ const DetailProductPage = () => {
   }):undefined;
 
   // console.log(listHero);
-  
+  const onMouseMoveHover = (e) =>{
+    console.log(e.target);
+    
+  }
+
+  const onChangeImage = (index) =>{
+    setSelectedImg(index);
+  }
   const listIntroduction = (
     <div>
       <p>
@@ -78,8 +87,9 @@ const DetailProductPage = () => {
       {/* <Breakcumb /> */}
       <div className="container bgwhite p-b-80">
         <div className="flex-w flex-sb">
+          {/* <div className="img-hover-zoom"><img src={data?data[0].images[selectedImg]:null}></img></div> */}
           <div className="w-size13 p-t-30 respon5">
-            <Hero className="detail-product-img" showThumbs={true} values={data?data[0].images:null}></Hero>
+            <Hero className="detail-product-img" selectedItem={setSelectedImg} onChangeImage={onChangeImage} showThumbs={true} values={data?data[0].images:null}></Hero>
           </div>
           <div className="w-size14 p-t-30 respon5">
             <h4 className="product-detail-name m-text16 p-b-13">
