@@ -21,7 +21,7 @@ const Hero = props => {
     : [];
 const onChange = (data) =>{
   // console.log(data);
-  props.onChangeImage(data)
+  // props.onChangeImage(data)
 }
 console.log('aa');
 
@@ -32,11 +32,11 @@ console.log('aa');
         showThumbs={props.showThumbs ? props.showThumbs : false}
         showStatus={false}
         selectedItem={props.value}
-        // autoPlay={true}
-        onChange={onChange}
+        autoPlay={true}
+        // onChange={onChange}
         // interval="100"
         // transitionTime={50}
-        // infiniteLoop
+        infiniteLoop
       >
         {data}
       </Carousel>

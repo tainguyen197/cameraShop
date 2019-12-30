@@ -28,11 +28,7 @@ const ProductPage = props => {
   const [currentPage, setCurrentPage] = useState(1);
   
   const {reset,onChange,value} = useInput();
-  const history = useHistory();
-  const param = useParams();
-  const {searchParams,putParam} = useSearchParams(history.location.search);
 
-  console.log(param);
   
   useEffect(() => {
     dispatch(productAction.loadProduct());
@@ -98,20 +94,12 @@ const ProductPage = props => {
   const onBrandChange = e => {
     setIsResetFilter(false);
     setBrandFilter(e.target.textContent);
-    // putParam('brand='+e.target.textContent.toLocaleLowerCase())
-    history.push({
-      pathname: '/san-pham',
-      search: '?brand='+e.target.textContent.toLocaleLowerCase()
-    })
     
   };
 
   const onMoneyChange = (e, index) => {
     setIsResetFilter(false);
-    history.push({
-      pathname: '/san-pham',
-      search: history.location.search?history.location.search+ '&money='+e.target.textContent.toLocaleLowerCase(): '&money='+e.target.textContent.toLocaleLowerCase()
-    })
+    setmoneyFilter(index);
   };
 
   const resetFilter = () => {
