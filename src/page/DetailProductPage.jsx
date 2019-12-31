@@ -70,10 +70,7 @@ const DetailProductPage = () => {
               <strong>Xuất xứ:</strong> {data?ReactHtmlParser(data[0].origin):"Chưa xác định"}
             </p>
             <p className="s-text8 p-t-10">
-              <strong>Phụ kiện:</strong> {data?ReactHtmlParser(data[0].subItems):"Chưa xác định"}
-            </p>
-            <p className="s-text8 p-t-10">
-              <strong>Khuyến mãi:</strong> {data?ReactHtmlParser(data[0].promote):"Chưa xác định"}
+              <strong>Mã sản phẩm:</strong> {data?ReactHtmlParser(data[0].code):"Chưa xác định"}
             </p>
             <p className="s-text8 p-t-10">
               <strong>Tóm tắt sản phẩm:</strong> {data?ReactHtmlParser(data[0].summary):"Chưa xác định"}
