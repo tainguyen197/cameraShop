@@ -22,6 +22,8 @@ const Homepage = props => {
   const listProduct = productStore.data ? productStore.data : [];
 
   const saleList = listProduct.filter(product => {
+    console.log(product);
+    
     return product.type === "sale";
   });
 
@@ -57,7 +59,7 @@ const Homepage = props => {
         items={saleListProduct}
         title="Sản phẩm bán chạy"
       ></SectionListProducts>
-      <ProductBanner/>
+      {/* <ProductBanner/> */}
       <SectionListProducts
         items={featuredListProduct}
         title="Đang giảm giá"

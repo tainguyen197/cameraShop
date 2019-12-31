@@ -23,8 +23,6 @@ const onChange = (data) =>{
   // console.log(data);
   // props.onChangeImage(data)
 }
-console.log('aa');
-
   return (
     <Fragment>
       <Carousel

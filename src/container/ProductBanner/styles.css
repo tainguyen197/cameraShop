@@ -1,7 +1,7 @@
 .product-banner-section {
   /* width: 90vw; */
   max-width: 1440px;
-
+  max-height: 380px;
   height: 50vh;
   position: relative;
   display: flex;

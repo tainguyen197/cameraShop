@@ -15,7 +15,7 @@ const SectionBrand = props => {
   }, []);
 
   const data = (Array.isArray(brandStore.data)?brandStore.data:[]);
-console.log(data);
+// console.log(data);
 
   const listBrand = data.map(item=>{
     return(

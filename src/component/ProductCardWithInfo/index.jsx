@@ -13,19 +13,7 @@ const ProductCardWithInfo = props => {
           <div className="block2-img wrap-pic-w of-hidden pos-relative">
             <img src={url||"/images/item-05.jpg"} alt="IMG-PRODUCT" />
             <div className="block2-overlay trans-0-4">
-              <a
-                href="#"
-                className="block2-btn-addwishlist hov-pointer trans-0-4"
-              >
-                <i
-                  className="icon-wishlist icon_heart_alt"
-                  aria-hidden="true"
-                />
-                <i
-                  className="icon-wishlist icon_heart dis-none"
-                  aria-hidden="true"
-                />
-              </a>
+
               <div className="block2-btn-addcart w-size1 trans-0-4">
                 {/* Button */}
                 <Link to={path}>

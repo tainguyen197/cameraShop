@@ -2,14 +2,14 @@ import firebase from 'firebase/app'
 import 'firebase/storage'
 
  const firebaseConfig = {
-    apiKey: "AIzaSyB1C17Gz1gCwdSIVHot2RG0cnC69UaKhzQ",
-    authDomain: "nguyen-duy-camera.firebaseapp.com",
-    databaseURL: "https://nguyen-duy-camera.firebaseio.com",
-    projectId: "nguyen-duy-camera",
-    storageBucket: "nguyen-duy-camera.appspot.com",
-    messagingSenderId: "889215149790",
-    appId: "1:889215149790:web:37ae45f0ffd3681c0f044f",
-    measurementId: "G-493RDFX0V0"
+    apiKey: "AIzaSyAP8CN9WnwxyQLyFdfJ-RndkloTDTnObr8",
+    authDomain: "mayanhnguyenduy.firebaseapp.com",
+    databaseURL: "https://mayanhnguyenduy.firebaseio.com",
+    projectId: "mayanhnguyenduy",
+    storageBucket: "mayanhnguyenduy.appspot.com",
+    messagingSenderId: "9108635613",
+    appId: "1:9108635613:web:5c0623462284cc2d7ac034",
+    measurementId: "G-TZQCGCL396"
   };
 
     // Initialize Firebase

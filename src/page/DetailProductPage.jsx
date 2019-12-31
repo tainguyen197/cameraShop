@@ -44,44 +44,7 @@ const DetailProductPage = () => {
   const onChangeImage = (index) =>{
     setSelectedImg(index);
   }
-  const listIntroduction = (
-    <div>
-      <p>
-        <p>
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-        </p>
-      </p>
-    </div>
-  );
+
   return (
     <Fragment>
       {/* <Breakcumb /> */}
@@ -98,7 +61,7 @@ const DetailProductPage = () => {
             <span className="m-text17">{data?OpitmizeNumber(data[0].price) + " VND":"Giá liên hệ"}</span>
 
             <p className="s-text8 p-t-10">
-              <strong>Tương hiệu:</strong>  {data?ReactHtmlParser(data[0].brand):"Chưa xác định"}
+              <strong>Thương hiệu:</strong>  {data?ReactHtmlParser(data[0].brand):"Chưa xác định"}
             </p>
             <p className="s-text8 p-t-10">
               <strong>Tình trạng:</strong> {data?ReactHtmlParser(data[0].status):"Chưa xác định"}
@@ -117,9 +80,8 @@ const DetailProductPage = () => {
             </p>
             {/*  */}
             <div className="p-t-33 p-b-60"></div>
-            {/*  */}
-            <DropdownContent content={data?ReactHtmlParser(data[0].description):""} label="Giới thiệu"></DropdownContent> 
-            <DropdownContent content={listIntroduction} label="Mô tả"></DropdownContent> 
+            {/* <DropdownContent content={data?ReactHtmlParser(data[0].description):""} label="Giới thiệu"></DropdownContent>  */}
+            {/* <DropdownContent content={listIntroduction} label="Mô tả"></DropdownContent>  */}
 
           </div>
         </div>

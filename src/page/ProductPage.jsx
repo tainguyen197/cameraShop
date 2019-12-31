@@ -34,7 +34,7 @@ const ProductPage = props => {
     dispatch(productAction.loadProduct());
   }, []);
 
-  const itemPerPage = 15;
+  const itemPerPage = 12;
 
   const listBrandOptions = brands.brands.map(item => item.name);
 
@@ -119,7 +119,7 @@ const ProductPage = props => {
             {/* left section */}
             <div className="col-sm-6 col-md-4 col-lg-3 p-b-50">
             <div className="leftbar p-r-20 p-r-0-sm">
-            <FilterName onChange={onChange} reset={reset} value={value} searchByName={searchByName}/>
+            {/* <FilterName onChange={onChange} reset={reset} value={value} searchByName={searchByName}/> */}
             </div>
               <div className="leftbar p-r-20 p-r-0-sm">
                 <FilterList
@@ -153,7 +153,7 @@ const ProductPage = props => {
                       style={{ cursor: "pointer" }}
                       className="s-text8 p-t-5 p-b-5 reset-filter"
                     >
-                      <strong>Reset kết quả tìm kiếm</strong>
+                      <button style={{width:'85px'}} className="hov1 bo-rad-23 size1 bg4 "><p style={{color: '#fff'}}> Đặt lại</p></button>
                     </span>
                   </div>
 
