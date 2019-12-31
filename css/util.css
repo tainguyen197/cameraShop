@@ -3606,7 +3606,11 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
 }
 
 .w-size7 {
-	width: 13%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 33%;
 }
 
 .w-size8 {
@@ -4134,6 +4138,6 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 
 	.respon7,
 	.respon4 {
-		width: 100%;
+		width: 50%;
 	}
 }
