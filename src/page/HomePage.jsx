@@ -22,8 +22,6 @@ const Homepage = props => {
   const listProduct = productStore.data ? productStore.data : [];
 
   const saleList = listProduct.filter(product => {
-    console.log(product);
-    
     return product.type === "sale";
   });
 
@@ -34,17 +32,30 @@ const Homepage = props => {
     />
   ));
 
-  const featuredList = saleList.filter(product => {
-    return product.type === "sale";
+  const hotList = listProduct.filter(product => {
+    return product.type === "hot";
   });
 
-  const featuredListProduct = featuredList.map(product => (
+  const hotListProduct = hotList.map(product => (
+    <ProductCard
+      {...product}
+      image={product.images[0] ? product.images[0] : "images/banner-05.jpg"}
+    />
+  ));
+
+  const usedList = listProduct.filter(product => {
+    return product.type === "used";
+  });
+  
+
+  const usedListProduct = usedList.map(product => (
     <ProductCard
       {...product}
       // name={product.name}
       image={product.images[0] ? product.images[0] : "images/banner-05.jpg"}
     />
   ));
+
   const listHero = new Array();
   listHero.push("images/hero/banner2.jpg");
   listHero.push("images/hero/banner3.jpg");
@@ -57,12 +68,16 @@ const Homepage = props => {
 
       <SectionListProducts
         items={saleListProduct}
-        title="Sản phẩm bán chạy"
+        title="Đang giảm giá"
       ></SectionListProducts>
       {/* <ProductBanner/> */}
       <SectionListProducts
-        items={featuredListProduct}
-        title="Đang giảm giá"
+        items={hotListProduct}
+        title="Sản phẩm hot"
+      ></SectionListProducts>
+      <SectionListProducts
+        items={usedListProduct}
+        title="Đã sử dụng"
       ></SectionListProducts>
     </Fragment>
   );

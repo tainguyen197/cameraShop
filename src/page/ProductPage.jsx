@@ -77,6 +77,7 @@ const ProductPage = props => {
 
   const listCardWithInfoList = listCard.map((item, index) => (
     <ProductCardWithInfo
+    {...item}
     brand={item.brand}
     id={item.id}
       key={index}

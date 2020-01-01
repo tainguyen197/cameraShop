@@ -1665,6 +1665,74 @@ li.sale-noti > a {
   left: 12px;
 }
 
+
+.block2-labelsale::before,
+.block2-labelused::before 
+{
+  z-index: 100;
+  font-family: Montserrat-Regular;
+  font-size: 12px;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 22px;
+  border-radius: 11px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+
+.block2-labelsale::before,
+.block2-labelhot::before 
+{
+  z-index: 100;
+  font-family: Montserrat-Regular;
+  font-size: 12px;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 22px;
+  border-radius: 11px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+
+.block2-labelsale::before,
+.block2-labelnew::before 
+{
+  z-index: 100;
+  font-family: Montserrat-Regular;
+  font-size: 12px;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 22px;
+  border-radius: 11px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
 .block2-labelsale::before {
   background-color: #e65540;
   content: 'Sale';
@@ -1674,6 +1742,17 @@ li.sale-noti > a {
   background-color: #66a8a6;
   content: 'New';
 }
+
+.block2-labelused::before {
+  background-color: tomato;
+  content: 'Like new';
+}
+
+.block2-labelhot::before {
+  background-color: #c00;
+  content: 'Hot';
+}
+
 
 /* ------------------------------------ */
 .block2-overlay {
@@ -1873,7 +1952,7 @@ li.sale-noti > a {
 */
 .bg-title-page {
   width: 100%;
-  min-height: 239px;
+  /* min-height: 239px; */
   padding-left: 15px;
   padding-right: 15px;
   background-repeat: no-repeat;

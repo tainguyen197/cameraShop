@@ -15,3 +15,14 @@
 .block2-overlay:hover .block2-btn-addcart{
     /* bottom: 100px; */
 }
+
+.price-color{
+    color: tomato;
+}
+
+.old-price-color{
+    /* padding-top: 10px; */
+    text-decoration: line-through;
+    color: #666666;
+    font-size: 12px;
+}
