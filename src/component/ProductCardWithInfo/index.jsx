@@ -26,12 +26,12 @@ const ProductCardWithInfo = props => {
             </div>
           </div>
           <div className="block2-txt p-t-20">
-            <a
-              href="product-detail.html"
-              className="block2-name dis-block s-text3 p-b-5"
-            >
-              {name||"Chưa có tên"}
-            </a>
+          <Link to={path}>
+                <a href="#"  className="block2-name dis-block s-text3 p-b-5 ">
+                  {name||"Chưa có tên"}
+             
+                </a>
+                </Link>
             <span className="block2-price m-text6 p-r-5">{OpitmizeNumber(price) + " VND"}</span>
           </div>
         </div>
