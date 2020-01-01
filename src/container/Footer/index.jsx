@@ -9,7 +9,7 @@ const Footer = () => {
             <h4 className="s-text12 p-b-30">LIÊN LẠC</h4>
             <div>
               <p className="s-text7 w-size27">
-              Bạn có thắc mắc? Hãy cho chúng tôi biết trong cửa hàng  Chung cư 109 Cao Đạt, Quận 5, Thành phố Hồ Chí Minh (090 367 16 71)
+              Bạn có thắc mắc? Hãy cho chúng tôi biết trong cửa hàng tại Chung cư 109 Cao Đạt, Quận 5, Thành phố Hồ Chí Minh (090 367 16 71)
               </p>
             
             </div>
