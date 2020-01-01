@@ -9,7 +9,7 @@ const PromoteBanner = props => {
           style={{
             objectFit: "contain",
             height: "100%",
-            width: "100vw"
+            width: "100%"
           }}
         />
         {/* <h2 className="l-text2 t-center">Women</h2>

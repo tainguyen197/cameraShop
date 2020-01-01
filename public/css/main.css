@@ -1951,7 +1951,7 @@ li.sale-noti > a {
 ///////////////////////////////////////////////////////////
 */
 .bg-title-page {
-  width: 100%;
+  width: auto;
   /* min-height: 239px; */
   padding-left: 15px;
   padding-right: 15px;

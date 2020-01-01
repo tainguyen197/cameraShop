@@ -4,6 +4,7 @@ import SectionListProducts from "../container/SectionListProducts";
 import ProductCard from "../component/ProductCard/index";
 import DropdownContent from "../component/DropdownContent/index";
 import Breakcumb from "../component/Breadcrumb/index";
+import ReactLoading from 'react-loading'
 import "./DetailProductPage.css";
 import { useSelector,useDispatch } from "react-redux";
 import {loadProductWithIdAndBrand} from '../action/product'
@@ -26,8 +27,7 @@ const DetailProductPage = () => {
   },[])
 
   const listHero =data? (data.images || []).map(item => {
-    console.log(item);
-    
+
     return(
     <div className="product-detail-banner">
       <img src={item.url} alt="IMG-BENNER" />
@@ -49,6 +49,8 @@ const DetailProductPage = () => {
     <Fragment>
       {/* <Breakcumb /> */}
       <div className="container bgwhite p-b-80">
+        {loading? <div style={{display:'flex',justifyContent:'center'}}> <ReactLoading type="bubbles" color="#e65540" /></div>
+        :
         <div className="flex-w flex-sb">
           {/* <div className="img-hover-zoom"><img src={data?data[0].images[selectedImg]:null}></img></div> */}
           <div className="w-size13 p-t-30 respon5">
@@ -82,6 +84,7 @@ const DetailProductPage = () => {
 
           </div>
         </div>
+}
       </div>
     </Fragment>
   );
