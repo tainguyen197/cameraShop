@@ -26,7 +26,7 @@ const SectionListProducts = props => {
           <h3 class="m-text5 t-center">{props.title}</h3>
         </div>
         {props.items.length === 0 ? (
-        <p style={{display:'block', textAlign: 'center', paddingBottom: '10px'}}> Không có sản phẩm nào</p>):(
+        <p style={{display:'block', textAlign: 'center', paddingBottom: '10px'}}> Đang cập nhật sản phẩm</p>):(
     
         <div className="alice-carousel-box" >
             <AliceCarousel

@@ -57,6 +57,7 @@ const Homepage = props => {
   ));
 
   const listHero = new Array();
+  listHero.push("images/hero/banner1.jpg");
   listHero.push("images/hero/banner2.jpg");
   listHero.push("images/hero/banner3.jpg");
 
@@ -73,11 +74,11 @@ const Homepage = props => {
       {/* <ProductBanner/> */}
       <SectionListProducts
         items={hotListProduct}
-        title="Sản phẩm hot"
+        title="Sản phẩm bán chạy"
       ></SectionListProducts>
       <SectionListProducts
         items={usedListProduct}
-        title="Đã sử dụng"
+        title="Sản phẩm cũ"
       ></SectionListProducts>
     </Fragment>
   );

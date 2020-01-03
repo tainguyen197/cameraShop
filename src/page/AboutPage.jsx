@@ -14,19 +14,17 @@ const AboutPage = () => {
             </div>
           </div>
           <div className="col-md-8 p-b-30">
-            <h3 className="m-text26 p-t-15 p-b-16">Câu chuyện của chúng tôi</h3>
+            <h3 className="m-text26 p-t-15 p-b-16">Về chúng tôi</h3>
             <p className="p-b-28">
-            Nhận mua bán , trao đổi , nâng cấp,hạ cấp máy ảnh và ống kính Sony .
-            Chúng tôi luôn dành cho bạn sự phục vụ và chi phí thật tốt .
-            Chúng ta là bạn bè .
-
-            Nhận mua bán , trao đổi , nâng cấp,hạ cấp máy ảnh và ống kính Sony .
+            Nhận mua bán, trao đổi, nâng cấp, hạ cấp máy ảnh và ống kính Sony.<br/>
+            Chúng tôi luôn dành cho bạn sự phục vụ và chi phí thật tốt.<br/>
+            Chúng ta là bạn bè.
             
             </p>
             <div className="bo13 p-l-29 m-l-9 p-b-10">
               <p className="p-b-11">
-              Chúng tôi luôn dành cho bạn sự phục vụ và chi phí thật tốt .
-            Chúng ta là bạn bè
+              "Chúng tôi luôn dành cho bạn sự phục vụ và chi phí thật tốt .
+            Chúng ta là bạn bè"
               </p>
               <span className="s-text7">- Nguyễn Duy</span>
             </div>

@@ -39,17 +39,17 @@ const ProductPage = props => {
   const listBrandOptions = brands.brands.map(item => item.name);
 
   const listMoneyRangeOptions = [
-    "Từ 0 - 5 triệu",
-    "Từ 5 - 10 triệu",
+    "Từ 0 - 10 triệu",
     "Từ 10 - 20 triệu",
-    "Trên 20 triệu"
+    "Từ 20 - 40 triệu",
+    "Trên 40 triệu"
   ];
 
   const listMoneyRange = [
-    { from: 0, to: 5 },
-    { from: 5, to: 10 },
+    { from: 0, to: 10 },
     { from: 10, to: 20 },
-    { from: 20, to: 1000 }
+    { from: 20, to: 40 },
+    { from: 40, to: 1000 }
   ];
 
   const unitVND = 1000000;
