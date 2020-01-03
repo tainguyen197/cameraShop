@@ -2,12 +2,12 @@
     height:  calc(100vh - 80px);
     width: 100%;
     object-fit:  cover;
-    object-position: center;
+    object-position: cover;
 }
 
 .detail-product-img .carousel .slide img{
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .detail-product-img .carousel-slider{
@@ -18,7 +18,7 @@
     height: 100%;
     width: 100%;
     object-fit:  cover;
-    object-position: center;
+    object-position: cover;
   }
 
 }

@@ -68,7 +68,7 @@ const Homepage = props => {
 
       <SectionListProducts
         items={saleListProduct}
-        title="Đang giảm giá"
+        title="Sản phẩm giảm giá"
       ></SectionListProducts>
       {/* <ProductBanner/> */}
       <SectionListProducts
