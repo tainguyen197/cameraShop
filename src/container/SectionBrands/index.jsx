@@ -15,7 +15,6 @@ const SectionBrand = props => {
   }, []);
 
   const data = (Array.isArray(brandStore.data)?brandStore.data:[]);
-// console.log(data);
 
   const listBrand = data.map(item=>{
     return(
@@ -23,7 +22,6 @@ const SectionBrand = props => {
     )
   })
 
-  
   return (
     <Fragment>
       <section className="banner bgwhite p-t-40 p-b-40">

@@ -154,7 +154,7 @@ const ProductPage = props => {
                       style={{ cursor: "pointer" }}
                       className="s-text8 p-t-5 p-b-5 reset-filter"
                     >
-                      <button style={{width:'85px'}} className="hov1 bo-rad-23 size1 bg4 "><p style={{color: '#fff'}}> Đặt lại</p></button>
+                      <button style={{width:'85px'}} className="hov1 bo-rad-23 size1 bg4 "><p style={{color: '#fff', margin: 'auto'}}> Đặt lại</p></button>
                     </span>
                   </div>
 

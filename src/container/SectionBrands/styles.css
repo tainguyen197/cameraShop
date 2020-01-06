@@ -11,9 +11,19 @@
     width: 150px;
 }
 
+@media (max-width: 500px) {
+    .section-brand-box .brand-box{
+        cursor: pointer;
+        margin: 0 10px;
+        height: 50px;
+        width: 75px;
+    }
+}
+
+
 .section-brand-box .brand-box img{
     height: 100%;
     width: 100%;
     object-fit: contain;
-
 }
+

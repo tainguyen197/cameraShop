@@ -45,6 +45,7 @@ const DetailProductPage = () => {
     setSelectedImg(index);
   }
 
+//  OpitmizeNumber(data[0].price)
   return (
     <Fragment>
       {/* <Breakcumb /> */}
@@ -60,7 +61,7 @@ const DetailProductPage = () => {
             <h4 className="product-detail-name m-text16 p-b-13">
               {data?ReactHtmlParser(data[0].name):"Chưa có tên"}
             </h4>
-            <span className="m-text17">{data?OpitmizeNumber(data[0].price) + " VND":"Giá liên hệ"}</span>
+            <span className="m-text17">{data&&data[0].price!==0?OpitmizeNumber(data[0].price) + " VND":"Giá liên hệ"}</span>
 
             <p className="s-text8 p-t-10">
               <strong>Thương hiệu:</strong>  {data?ReactHtmlParser(data[0].brand):"Chưa xác định"}
