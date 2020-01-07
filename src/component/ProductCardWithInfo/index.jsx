@@ -33,7 +33,7 @@ const ProductCardWithInfo = props => {
               </a>
             </Link>
             <span className="block2-price m-text6 p-r-5">
-              {OpitmizeNumber(price) + " VND"}
+              {price!==0? OpitmizeNumber(price) + " VND":"Giá liên hệ"}
             </span>
             {type==='sale'?<p className='old-price-color'>{OpitmizeNumber(props.oldPrice)|| 0} VND</p>:null}
 

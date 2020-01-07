@@ -13,7 +13,7 @@ import AboutPage from "./page/AboutPage"
 import {ScrollToTop} from "./config/scrollToTop";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import 'react-alice-carousel/lib/alice-carousel.css'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">

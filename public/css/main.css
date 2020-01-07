@@ -114,8 +114,8 @@ a:focus {
 }
 
 a:hover {
-	text-decoration: none;
-	color: #e65540;
+	text-decoration: none !important;
+	color: #e65540 !important;
 }
 
 /* ------------------------------------ */
@@ -1953,8 +1953,8 @@ li.sale-noti > a {
 .bg-title-page {
   width: auto;
   /* min-height: 239px; */
-  padding-left: 15px;
-  padding-right: 15px;
+  /* padding-left: 15px; */
+  /* padding-right: 15px; */
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;

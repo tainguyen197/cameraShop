@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 import "./ProductCard.css";
 const ProductCard = props => {
   const { image, name, price,id,brand,type } = props;
-  
+
   const path = "/chi-tiet?id=" + id + "&brand=" + brand;
   return (
     <Fragment>
@@ -19,7 +19,7 @@ const ProductCard = props => {
           </div>
           <div className="content-product-card">
             <p>{name !== undefined ? name : "Chưa đặt tên"}</p>
-            <strong><p className='price-color'>{price ? OpitmizeNumber(price) + " VND" : "Giá liên hệ"}</p></strong>
+            <strong><p className='price-color'>{price !==0 ? OpitmizeNumber(price) + " VND" : "Giá liên hệ"}</p></strong>
             {type==='sale'?<p className='old-price-color'>{OpitmizeNumber(props.oldPrice)|| 0} VND</p>:null}
           </div>
         </div>
