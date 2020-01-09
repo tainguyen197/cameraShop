@@ -123,6 +123,19 @@
         "status": "Còn hàng",
         "code":"đang cập nhật",
         "images": []
+      },
+      {
+        "id": "a6000-1",
+        "name": "Sony Alpha A6000",
+        "price": 7000000,
+        "guarantee": "1 tháng",
+        "origin": "Thái Lan",
+        "brand": "sony",
+        "summary": "<br/>_ Cảm biến Exmor™ APS HD CMOS 24.3MP có bộ xử lý BIONZ X™. <br/>_ Độ phân giải 24.3 MP. <br/>_ Lấy nét tự động Fast Hybrid. <br/>_ Khung ngắm điện tử 1,0 cm. <br/>_ Màn hình 3 inch. <br/>_ ISO 100-25600. <br/>_ Tốc độ chụp 11 ảnh / giây. <br/>_ Chia sẻ và kiểm soát đơn giản cùng Wi-Fi® và NFC một chạm. <br/>_ Pin tương thích FW50.",
+        "type": "used",
+        "status": "Còn hàng",
+        "code":"4753279",
+        "images": []
       }
      
     ]
